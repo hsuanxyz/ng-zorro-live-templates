@@ -1,0 +1,17 @@
+<templateSet group="ng-zorro">
+    {{#each this}}
+        <template
+                name="{{name}}"
+                value={{{tpl}}}
+                description="{{{description}}}"
+                toReformat="true"
+                toShortenFQNames="true">{{#if variables}}{{#each variables}}
+            <variable name="{{{name}}}" expression="{{{expression}}}" defaultValue="{{{defaultValue}}}" alwaysStopAt="{{{alwaysStopAt}}}" />{{/each}}{{/if}}
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+    {{/each}}
+</templateSet>
