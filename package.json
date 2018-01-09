@@ -1,0 +1,23 @@
+{
+  "name": "ng-zorro-live-templates",
+  "version": "0.0.1",
+  "description": "ng-zorro Live Templates for WebStorm",
+  "main": "build.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HsuanXyz/ng-zorro-live-templates.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HsuanXyz/ng-zorro-live-templates/issues"
+  },
+  "homepage": "https://github.com/HsuanXyz/ng-zorro-live-templates#readme",
+  "devDependencies": {
+    "handlebars": "^4.0.6",
+    "js-yaml": "^3.8.3"
+  }
+}
