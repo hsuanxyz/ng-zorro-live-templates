@@ -25,6 +25,27 @@ ng-zorro Live Templates for WebStorm
 - 关键字带 `.` 表示输入属性
 - 关键字带 `@` 表示输出属性
 
+提示： 可以使用 Emmet 语法快速生成标签
+
+`nzButtonGroup>nzButton*2`
+
+```html
+<nz-button-group>
+    <button nz-button (click)=""></button>
+    <button nz-button (click)=""></button>
+</nz-button-group>
+```
+
+`nzMenu>nzMenuItem*3>nzIcon+span{item$}`
+
+```html
+<ul nz-menu>
+    <li nz-menu-item><i class="anticon anticon-step-backward"></i><span>item1</span></li>
+    <li nz-menu-item><i class="anticon anticon-step-backward"></i><span>item2</span></li>
+    <li nz-menu-item><i class="anticon anticon-step-backward"></i><span>item3</span></li>
+</ul>
+```
+
 ## 文档
 
 <!--DOC_START-->
