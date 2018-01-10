@@ -3,9 +3,11 @@
 const fs = require('fs');
 const yaml = require('js-yaml');
 const Handlebars = require('handlebars');
-
+const readme = _read('README.md');
 const template = Handlebars.compile(_read('src/ng-zorro.hbs'));
+const docHbs = Handlebars.compile(_read('src/doc.hbs'));
 const templates = yaml.safeLoad(readTemplates());
+const data = [];
 
 function _read(file) {
     return fs.readFileSync(file, 'utf8');
@@ -63,14 +65,13 @@ function readTemplates() {
     // TODO 只读 .yaml
     const templateFiles = fs.readdirSync('./src/templates');
     templateFiles.forEach(file => {
-        template += _read('./src/templates/' + file)
+        template += _read('./src/templates/' + file) + '\n'
     });
     return template;
 }
 
 
 function yaml2xml() {
-    const data = [];
     Object.keys(templates).forEach(k => {
         const t = templates[k];
         let tpl = t.tpl;
@@ -79,6 +80,7 @@ function yaml2xml() {
         if (Array.isArray(t.variables)) {
             t.variables = t.variables.map(val => {
                 val.defaultValue = _replaceDefaultValue(val.defaultValue);
+                val.expression = _replaceDefaultValue(val.expression);
                 if (typeof val.alwaysStopAt !== 'boolean' ) {
                     val.alwaysStopAt = true;
                 }
@@ -97,4 +99,21 @@ function yaml2xml() {
     return template(data);
 }
 
+function getTestString() {
+    return Object.keys(templates)
+    .map(k => {
+        if (k.indexOf('.') !== -1 || k.indexOf('@') !== -1 ) {
+            return `<div ${k}></div>`;
+        } else {
+            return k;
+        }
+    }).join('\n');
+}
+
 fs.writeFileSync('./ng-zorro.xml', yaml2xml());
+fs.writeFileSync('README.md', readme.replace(
+    /(<!--DOC_START-->)[\s\S]*(<!--DOC_END-->)/g,
+    function(match, $1, $2) {
+        return $1 + '\n' + docHbs(data) + '\n' + $2;
+    }));
+fs.writeFileSync('./src/test.html', getTestString());

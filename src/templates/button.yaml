@@ -2,10 +2,11 @@
 
 nzButton:
   description: 按钮
-  tpl: <button $cpm$ (click)="$VAR0$">$END$</button>
+  tpl: <button $cpm$ (click)="$VAR0$">$VAR1$</button>$END$
   variables:
     - {name: 'cpm', alwaysStopAt: false, defaultValue: '"nz-button"'}
     - {name: 'VAR0', defaultValue: ''}
+    - {name: 'VAR1', defaultValue: ''}
 
 nzButtonGroup:
   description: 按钮组, 可以将多个 nz-button 放入 nz-button-group 的容器中
