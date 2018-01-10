@@ -75,16 +75,19 @@ function yaml2xml() {
         const t = templates[k];
         let tpl = t.tpl;
         
-        // 处理 defaultValue 中的特殊字符
+        // 处理 defaultValue
         if (Array.isArray(t.variables)) {
             t.variables = t.variables.map(val => {
                 val.defaultValue = _replaceDefaultValue(val.defaultValue);
+                if (typeof val.alwaysStopAt !== 'boolean' ) {
+                    val.alwaysStopAt = true;
+                }
                 return val;
             })
         }
         const snippet = {
             name: k,
-            description: `nz: ${t.description || _replaceDescription(t.tpl)}`,
+            description: _replaceDescription(t.description ? JSON.stringify(t.description) : _replaceTemplate(tpl)),
             tpl: _replaceTemplate(tpl),
             variables: t.variables || [],
             tplRaw: tpl
@@ -94,4 +97,4 @@ function yaml2xml() {
     return template(data);
 }
 
-fs.writeFileSync('./.tmp.xml', yaml2xml());
+fs.writeFileSync('./ng-zorro.xml', yaml2xml());
