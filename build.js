@@ -114,6 +114,6 @@ fs.writeFileSync('./nz-zorro/ng-zorro.xml', yaml2xml());
 fs.writeFileSync('README.md', readme.replace(
     /(<!--DOC_START-->)[\s\S]*(<!--DOC_END-->)/g,
     function(match, $1, $2) {
-        return $1 + '\n' + docHbs(data) + '\n' + $2;
+        return $1 + '\n' + '\n| 关键字 | 描述 | \n| ----  | ---  | \n' + docHbs(data) + '\n' + $2;
     }));
 fs.writeFileSync('./src/test.html', getTestString());
