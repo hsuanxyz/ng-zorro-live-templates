@@ -1,0 +1,105 @@
+# icon - https://ng.ant.design/#/components/steps
+
+nzSteps:
+  description: 步骤条
+  tpl: |-
+    <nz-steps [(nzCurrent)]="$VAR0$" [nzStatus]="'$VAR1$'" [nzSize]="'$VAR2$'" [nzDirection]="'$VAR3$'">
+      <nz-step [nzTitle]="'$VAR4$'"></nz-step>
+      $END$
+    </nz-steps>
+    <div class="steps-content">
+
+    </div>
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+    - {name: 'VAR4', defaultValue: ''}
+    - {name: 'VAR1', defaultValue: '"process"', expression: 'enum("wait", "process", "finish", "error")'}
+    - {name: 'VAR2', defaultValue: '"default"', expression: 'enum("default", "small")'}
+    - {name: 'VAR3', defaultValue: '"horizontal"', expression: 'enum("horizontal", "vertical")'}
+
+nzSteps+:
+  description: 步骤条
+  tpl: |-
+    <nz-steps [(nzCurrent)]="$VAR0$" [nzStatus]="'$VAR1$'" [nzSize]="'$VAR2$'" [nzDirection]="'$VAR3$'">
+      <nz-step [nzTitle]="'$VAR4$'" [nzDescription]="$VAR5$"></nz-step>
+      <ng-template #$VAR5$>
+        $END$
+      </ng-template>
+    </nz-steps>
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+    - {name: 'VAR4', defaultValue: ''}
+    - {name: 'VAR5', defaultValue: ''}
+    - {name: 'VAR1', defaultValue: '"process"', expression: 'enum("wait", "process", "finish", "error")'}
+    - {name: 'VAR2', defaultValue: '"default"', expression: 'enum("default", "small")'}
+    - {name: 'VAR3', defaultValue: '"horizontal"', expression: 'enum("horizontal", "vertical")'}
+
+nzStep:
+  description: "步骤条子项"
+  tpl: |-
+    <nz-step [nzTitle]="'$VAR0$'" [nzDescription]="'$VAR1$'" [nzStatus]="'$VAR2$'"></nz-step>$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+    - {name: 'VAR1', defaultValue: ''}
+    - {name: 'VAR2', defaultValue: ''}
+
+nzStepIcon:
+  description: "步骤条子项 代图标"
+  tpl: |-
+    <nz-step [nzTitle]="'$VAR0$'" [nzDescription]="'$VAR1$'">
+      <ng-template #nzIcon>
+        <i class="anticon anticon-$VAR2$"></i>
+      </ng-template>
+    </nz-step>$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+    - {name: 'VAR1', defaultValue: ''}
+    - {name: 'VAR2', defaultValue: 'user'}
+
+nzSteps.nzCurrent:
+  description: "指定当前步骤，从 0 开始记数。在子 Step 元素中，可以通过 nzStatus 属性覆盖状态"
+  tpl: |-
+    [nzCurrent]="$END$"
+
+nzSteps.nzStatus:
+  description: "指定当前步骤的状态，可选wait process finish error"
+  tpl: |-
+    [nzStatus]="'$VAR0$'"
+  variables:
+    - {name: 'VAR0', defaultValue: '"process"', expression: 'enum("wait", "process", "finish", "error")'}
+
+nzSteps.nzSize:
+  description: "指定大小，目前支持普通（default）和迷你（small）"
+  tpl: |-
+    [nzSize]="'$VAR0$'"
+  variables:
+    - {name: 'VAR0', defaultValue: '"default"', expression: 'enum("default", "small")'}
+
+nzSteps.nzDirection:
+  description: "指定步骤条方向。目前支持水平（horizontal）和竖直（vertical）两种方向"
+  tpl: |-
+    [nzDirection]="$VAR0$"
+  variables:
+    - {name: 'VAR0', defaultValue: '"horizontal"', expression: 'enum("horizontal", "vertical")'}
+
+nzSteps.nzProgressDot:
+  description: "通过添加该属性使用点状步骤条"
+  tpl: |-
+    [nzProgressDot]="$END$"
+
+nzStep.nzStatus:
+  description: "指定状态。当不配置该属性时，会使用 Steps 的 current 来自动指定状态。可选：wait process finish error"
+  tpl: |-
+    [nzStatus]="'$VAR0$'"
+  variables:
+    - {name: 'VAR0', defaultValue: '"process"', expression: 'enum("wait", "process", "finish", "error")'}
+
+nzStep.nzTitle:
+  description: "标题"
+  tpl: |-
+    [nzTitle]="'$END$'"
+
+nzStep.nzDescription:
+  description: "步骤的详情描述，可选。如果需传入TemplateRef，可使用 template | string"
+  tpl: |-
+    [nzDescription]="$END$"

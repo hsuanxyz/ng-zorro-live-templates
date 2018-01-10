@@ -1,0 +1,22 @@
+# affix - https://ng.ant.design/#/components/affix
+
+nzAffix:
+  description: 固钉
+  tpl: <nz-affix>$END$</nz-affix>
+
+nzAffix@nzChange:
+  description: 固定状态改变时触发的回调函数
+  tpl: |-
+    (nzChange)="$fun$($event)"
+  variables:
+    - {name: 'fun', defaultValue: 'fun'}
+
+nzAffix.nzOffsetTop:
+  description: "距离窗口顶部达到指定偏移量后触发"
+  tpl: |-
+    [nzOffsetTop]="$END$"
+
+nzAffix.nzTarget:
+  description: "设置需要监听其滚动事件的元素，值为一个返回对应 DOM 元素的函数"
+  tpl: |-
+    [nzTarget]="$END$"

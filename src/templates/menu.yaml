@@ -1,0 +1,87 @@
+# icon - https://ng.ant.design/#/components/menu
+
+nzMenu:
+  description: 导航菜单
+  tpl: |-
+    <ul $cpm$>$END$</ul>
+  variables:
+    - {name: 'cpm', alwaysStopAt: false, defaultValue: '"nz-menu"'}
+
+nzMenuItem:
+  description: 菜单子项目
+  tpl: |-
+    <li $cpm$>$END$</li>
+  variables:
+    - {name: 'cpm', alwaysStopAt: false, defaultValue: '"nz-menu-item"'}
+
+nzMenuItemDivider:
+  description: 菜单子项目分隔线
+  tpl: |-
+    <li $cpm$></li>
+  variables:
+    - {name: 'cpm', alwaysStopAt: false, defaultValue: '"nz-menu-item-divider"'}
+
+nzMenuSubmenu:
+  description: 子菜单
+  tpl: |-
+    <li nz-submenu>
+      <span title>$VAR0$</span>
+      <ul>
+        <li nz-menu-item>$END$</li>
+      </ul>
+    </li>
+  variables:
+    - {name: 'VAR0', defaultValue: '"title"'}
+
+nzMenuGroup:
+  description: 子菜单组
+  tpl: |-
+    <li nz-menu-group>
+      <span title>$VAR0$</span>
+      <ul>
+        <li nz-menu-item>$END$</li>
+      </ul>
+    </li>
+  variables:
+    - {name: 'VAR0', defaultValue: '"title"'}
+
+nzMenu.nzTheme:
+  description: "主题颜色"
+  tpl: |-
+    [nzTheme]="'$VAR0$'"
+  variables:
+    - {name: 'VAR0', defaultValue: '"light"', expression: 'enum("light", "dark")'}
+
+nzMenu.nzMode:
+  description: "菜单类型，现在支持垂直、水平、和内嵌模式三种"
+  tpl: |-
+    [nzMode]="'$VAR0$'"
+  variables:
+    - {name: 'VAR0', defaultValue: '"vertical"', expression: 'enum("vertical", "horizontal", "inline")'}
+
+nzMenu.nzInlineCollapsed:
+  description: "控制内嵌菜单的缩起/展开。"
+  tpl: |-
+    [nzInlineCollapsed]="$END$"
+
+nzMenu.nzClickActive:
+  description: "点击后是否选中子菜单"
+  tpl: |-
+    [nzClickActive]="$END$"
+
+nzMenuSubmenu.nzOpen:
+  description: "submenu是否展开，可双向绑定"
+  tpl: |-
+    [nzOpen]="$END$"
+
+nzMenuSubmenu@nzOpenChange:
+  description: "submenu展开关闭回调"
+  tpl: |-
+    (nzOpenChange)="$fun$($event)"
+  variables:
+    - {name: 'fun', defaultValue: '"fun"'}
+
+nzMenuItem.nzSelected:
+  description: "当前菜单项是否被选中"
+  tpl: |-
+    [nzSelected]="$END$"

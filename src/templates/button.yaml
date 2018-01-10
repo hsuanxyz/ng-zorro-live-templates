@@ -1,18 +1,18 @@
 # button - https://ng.ant.design/#/components/button
 
-nz-btn:
+nzButton:
   description: 按钮
   tpl: <button $cpm$ (click)="$VAR0$">$END$</button>
   variables:
     - {name: 'cpm', alwaysStopAt: false, defaultValue: '"nz-button"'}
     - {name: 'VAR0', defaultValue: ''}
 
-nz-btn-group:
+nzButtonGroup:
   description: 按钮组, 可以将多个 nz-button 放入 nz-button-group 的容器中
   tpl: |-
     <nz-button-group>$END$</nz-button-group>
 
-nz-btn-group+:
+nzButtonGroup+:
   tpl: |-
     <nz-button-group>
       <button nz-button (click)="$VAR0$">$VAR1$</button>$END$
@@ -21,31 +21,39 @@ nz-btn-group+:
     - {name: 'VAR0', defaultValue: ''}
     - {name: 'VAR1', defaultValue: ''}
 
-nz-btn:disabled:
+nzButton.disabled:
   tpl: |-
-     <button nz-button disabled (click)="$VAR0$">$END$</button>
-  variables:
-      - {name: 'VAR0', defaultValue: ''}
+     disabled
 
-nz-btn:type:
+nzButton.nzType:
   description: 设置按钮类型，可选值为 primary dashed danger default
   tpl: |-
-     <button nz-button [nzType]="'$VAR0$'" (click)="$VAR1$">$END$</button>
+     [nzType]="'$VAR0$'"
   variables:
-    - {name: 'VAR0', defaultValue: '"default"'}
-    - {name: 'VAR1', defaultValue: ''}
+    - {name: 'VAR0', defaultValue: '"default"', expression: 'enum("primary", "dashed", "danger", "default")'}
 
-nz-btn:ghost:
+nzButton.nzGhost:
   description: 设置幽灵按钮
   tpl: |-
-    <button nz-button nzGhost (click)="$VAR0$">$END$</button>
-  variables:
-      - {name: 'VAR0', defaultValue: ''}
+    nzGhost
 
-nz-btn:loading:
+nzButton.nzLoading:
   description: 设置按钮载入状态
   tpl: |-
-    <button nz-button [nzLoading]="$VAR0$" (click)="$VAR1$">$END$</button>
+    [nzLoading]="$VAR0$"
   variables:
     - {name: 'VAR0', defaultValue: '"isLoading"'}
-    - {name: 'VAR1', defaultValue: ''}
+
+nzButton.nzShape:
+  description: 设置按钮形状，可选值为 circle 或者不设
+  tpl: |-
+     [nzShape]="'$VAR0$'"
+  variables:
+    - {name: 'VAR0', defaultValue: '"circle"'}
+
+nzButton.nzSize:
+  description: 设置按钮大小，可选值为 small large 或者不设
+  tpl: |-
+     [nzSize]="'$VAR0$'"
+  variables:
+    - {name: 'VAR0', defaultValue: '"default"', expression: 'enum("small", "large", "default")'}

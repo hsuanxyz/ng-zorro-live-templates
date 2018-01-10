@@ -1,0 +1,57 @@
+# icon - https://ng.ant.design/#/components/pagination
+
+nzPagination:
+  description: 分页
+  tpl: |-
+    <nz-pagination [nzPageIndex]="$VAR0$" [nzTotal]="$VAR1$" [nzPageSize]="$VAR2$"></nz-pagination>
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+    - {name: 'VAR1', defaultValue: ''}
+    - {name: 'VAR2', defaultValue: ''}
+
+nzPagination.nzPageIndex:
+  description: "当前页数(双向绑定)"
+  tpl: |-
+    [nzPageIndex]="$END$"
+
+nzPagination.nzTotal:
+  description: "数据总数"
+  tpl: |-
+    [nzTotal]="$END$"
+
+nzPagination.nzPageSize:
+  description: "每页条数 (双向绑定)"
+  tpl: |-
+    [nzPageSize]="$END$"
+
+nzPagination.nzShowSizeChanger:
+  description: "是否可以改变 pageSize，当添加该属性时显示页面改变下拉菜单"
+  tpl: |-
+    nzShowSizeChanger
+
+nzPagination.nzPageSizeSelectorValues:
+  description: "每页显示条目数下拉框值"
+  tpl: |-
+    [nzPageSizeSelectorValues]="$END$"
+
+nzPagination.nzShowQuickJumper:
+  description: "是否可以快速跳转至某页，当添加该属性时显示快速跳转"
+  tpl: |-
+    nzShowQuickJumper
+
+nzPagination.nzSize:
+  description: "当为「small」时，是小尺寸分页"
+  tpl: |-
+    [nzSize]="'$VAR0$'"
+  variables:
+    - {name: 'VAR0', defaultValue: '"default"', expression: 'enum("small", "large", "default")'}
+
+nzPagination.nzSimple:
+  description: "当添加该属性时，显示为简单分页"
+  tpl: |-
+    nzSimple
+
+nzPagination.nzShowTotal:
+  description: "当添加该属性时，显示总共有多少条数据"
+  tpl: |-
+    nzShowTotal

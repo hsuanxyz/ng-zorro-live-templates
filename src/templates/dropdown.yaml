@@ -1,0 +1,133 @@
+# https://ng.ant.design/#/components/dropdown
+
+nzDropdown:
+  description: 下拉菜单
+  tpl: |-
+    <nz-dropdown>
+      <a class="ant-dropdown-link" nz-dropdown>
+        $VAR0$ <i class="anticon anticon-down"></i>
+      </a>
+      <ul nz-menu>
+        <li nz-menu-item>
+          $END$
+        </li>
+      </ul>
+    </nz-dropdown>
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzDropdownButton:
+  description: 下拉菜单 按钮样式
+  tpl: |-
+    <nz-dropdown-button (nzClick)="$fun$($event)">
+      $VAR0$
+      <ul nz-menu>
+        <li nz-menu-item>
+          $END$
+        </li>
+      </ul>
+    </nz-dropdown-button>
+  variables:
+    - {name: 'fun', defaultValue: '"fun"'}
+    - {name: 'VAR0', defaultValue: ''}
+
+nzDropdown.nz-dropdown:
+  description: "用于定位触发下拉菜单的元素"
+  tpl: |-
+    nz-dropdown
+
+nzDropdown.nz-dropdown-custom:
+  description: "自定义下拉菜单内容，不可与menu混用"
+  tpl: |-
+    nz-dropdown-custom
+
+nzDropdown.nzTrigger:
+  description: "触发下拉的行为"
+  tpl: |-
+    [nzTrigger]="'$VAR0$'"
+  variables:
+    - {name: 'VAR0', defaultValue: '"hover"', expression: 'enum("click", "hover")'}
+
+nzDropdown.nzClickHide:
+  description: "点击后是否隐藏菜单"
+  tpl: |-
+    [nzClickHide]="$VAR0$"
+  variables:
+    - {name: 'VAR0', defaultValue: '"true"'}
+
+nzDropdown.nzVisible:
+  description: "菜单是否显示"
+  tpl: |-
+    [nzVisible]="$VAR0$"
+  variables:
+    - {name: 'VAR0', defaultValue: '"false"'}
+
+nzDropdown@nzVisibleChange:
+  description: "菜单显示状态改变时调用，参数为 nzVisible"
+  tpl: |-
+    (nzVisibleChange)="$fun$($event)"
+  variables:
+    - {name: 'fun', defaultValue: '"fun"'}
+
+nzDropdown.nzPlacement:
+  description: "菜单弹出位置：bottomLeft bottomCenter bottomRight topLeft topCenter topRight"
+  tpl: |-
+    [nzPlacement]="'$VAR0$'"
+  variables:
+    - {name: 'VAR0', defaultValue: '"bottomLeft"', expression: 'enum("bottomLeft", "bottomCenter", "bottomRight", "topLeft", "topCenter", "topRight")'}
+
+nzDropdownButton.nzType:
+  description: "按钮类型"
+  tpl: |-
+     [nzType]="'$VAR0$'"
+  variables:
+    - {name: 'VAR0', defaultValue: '"default"', expression: 'enum("primary", "dashed", "danger", "default")'}
+
+nzDropdownButton.nzSize:
+  description: "按钮大小"
+  tpl: |-
+     [nzSize]="'$VAR0$'"
+  variables:
+    - {name: 'VAR0', defaultValue: '"default"', expression: 'enum("small", "large", "default")'}
+
+nzDropdownButton@nzClick:
+  description: "点击左侧按钮的回调"
+  tpl: |-
+    (nzClick)="$fun$($event)"
+  variables:
+    - {name: 'fun', defaultValue: '"fun"'}
+
+nzDropdownButton.nzTrigger:
+  description: "触发下拉的行为"
+  tpl: |-
+    [nzTrigger]="'$VAR0$'"
+  variables:
+    - {name: 'VAR0', defaultValue: '"hover"', expression: 'enum("click", "hover")'}
+
+nzDropdownButton.nzClickHide:
+  description: "点击后是否隐藏菜单"
+  tpl: |-
+    [nzClickHide]="$VAR0$"
+  variables:
+    - {name: 'VAR0', defaultValue: '"true"'}
+
+nzDropdownButton.nzVisible:
+  description: "菜单是否显示"
+  tpl: |-
+    [nzVisible]="$VAR0$"
+  variables:
+    - {name: 'VAR0', defaultValue: '"false"'}
+
+nzDropdownButton@nzVisibleChange:
+  description: "菜单显示状态改变时调用，参数为 nzVisible"
+  tpl: |-
+    (nzVisibleChange)="$fun$($event)"
+  variables:
+    - {name: 'fun', defaultValue: '"fun"'}
+
+nzDropdownButton.nzPlacement:
+  description: "菜单弹出位置：bottomLeft bottomCenter bottomRight topLeft topCenter topRight"
+  tpl: |-
+    [nzPlacement]="'$VAR0$'"
+  variables:
+    - {name: 'VAR0', defaultValue: '"bottomLeft"', expression: 'enum("bottomLeft", "bottomCenter", "bottomRight", "topLeft", "topCenter", "topRight")'}

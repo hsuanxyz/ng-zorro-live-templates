@@ -1,0 +1,23 @@
+# https://ng.ant.design/#/components/breadcrumb
+
+nzBreadcrumb:
+  description: 面包屑
+  tpl: <nz-breadcrumb>$END$</nz-breadcrumb>
+
+nzBreadcrumb+:
+  description: 面包屑
+  tpl: |-
+    <nz-breadcrumb>
+      <nz-breadcrumb-item>$END$</nz-breadcrumb-item>
+    </nz-breadcrumb>
+
+nzBreadcrumbItem:
+  description: 面包屑 item
+  tpl: <nz-breadcrumb-item>$END$</nz-breadcrumb-item>
+
+nzBreadcrumb.nzOffsetTop:
+  description: "分隔符自定义"
+  tpl: |-
+    [nzSeparator]="$VAR0$"
+  variables:
+    - {name: 'VAR0', defaultValue: '"/"'}

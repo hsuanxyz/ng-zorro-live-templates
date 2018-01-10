@@ -1,0 +1,89 @@
+# grid - https://ng.ant.design/#/components/grid
+
+nzRow:
+  description: 栅格-行
+  tpl: |-
+    <div $cpm$>$END$</div>
+  variables:
+    - {name: 'cpm', alwaysStopAt: false, defaultValue: '"nz-row"'}
+
+nzCol:
+  description: 栅格-列
+  tpl: |-
+    <div $cpm$>$END$</div>
+  variables:
+    - {name: 'cpm', alwaysStopAt: false, defaultValue: '"nz-col"'}
+
+nzRow.nzGutter:
+  description: "栅格间隔"
+  tpl: |-
+    [nzGutter]="$END$"
+
+nzRow.nzType:
+  description: "布局模式，可选 flex，现代浏览器下有效"
+  tpl: |-
+    [nzType]="'flex'"
+
+nzRow.nzAlign:
+  description: "flex 布局下的垂直对齐方式：top middle bottom"
+  tpl: |-
+    [nzAlign]="'$VAR0$'"
+  variables:
+    - {name: 'VAR0', defaultValue: '"top"', expression: 'enum("top", "middle", "bottom")'}
+
+nzRow.nzJustify:
+  description: "flex 布局下的水平排列方式：start end center space-around space-between"
+  tpl: |-
+    [nzJustify]="'$VAR0$'"
+  variables:
+    - {name: 'VAR0', defaultValue: '"start"', expression: 'enum("start", "end", "center", "space-around", "space-between")'}
+
+nzCol.nzSpan:
+  description: "栅格占位格数，为 0 时相当于 display: none"
+  tpl: |-
+    [nzSpan]="$END$"
+
+nzCol.nzOrder:
+  description: "栅格顺序，flex 布局模式下有效"
+  tpl: |-
+    [nzOrder]="$END$"
+
+nzCol.nzOffset:
+  description: "栅格左侧的间隔格数，间隔内不可以有栅格"
+  tpl: |-
+    [nzOffset]="$END$"
+
+nzCol.nzPush:
+  description: "栅格向右移动格数"
+  tpl: |-
+    [nzPush]="$END$"
+
+nzCol.nzPull:
+  description: "栅格向左移动格数"
+  tpl: |-
+    [nzPull]="$END$"
+
+nzCol.nzXs:
+  description: "&lt;768px 响应式栅格，可为栅格数或一个包含其他属性的对象"
+  tpl: |-
+    [nzXs]="$END$"
+
+nzCol.nzSm:
+  description: "≥768px 响应式栅格，可为栅格数或一个包含其他属性的对象"
+  tpl: |-
+    [nzSm]="$END$"
+
+nzCol.nzMd:
+  description: "≥992px 响应式栅格，可为栅格数或一个包含其他属性的对象"
+  tpl: |-
+    [nzMd]="$END$"
+
+nzCol.nzLg:
+  description: "≥1200px 响应式栅格，可为栅格数或一个包含其他属性的对象"
+  tpl: |-
+    [nzLg]="$END$"
+
+nzCol.nzXl:
+  description: "≥1600px 响应式栅格，可为栅格数或一个包含其他属性的对象"
+  tpl: |-
+    [nzXl]="$END$"
