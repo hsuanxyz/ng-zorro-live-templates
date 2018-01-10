@@ -40,3 +40,5 @@ nzButton.nzType:
     - {name: 'VAR0', defaultValue: '"default"', expression: 'enum("primary", "dashed", "danger", "default")'}
 
 ```
+
+更多设置查看 [Live Templates](https://www.jetbrains.com/help/webstorm/live-templates.html) 文档。
