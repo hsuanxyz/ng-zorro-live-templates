@@ -3,7 +3,7 @@ ng-zorro Live Templates for WebStorm
 
 ![GIT](https://github.com/HsuanXyz/ng-zorro-live-templates/blob/master/GIF.gif?raw=true)
 
-模板还在添加中，欢迎提交 [issues](https://github.com/HsuanXyz/ng-zorro-live-templates/issues/new) 和 PR
+模板还在添加中，欢迎提交 [issues](https://github.com/HsuanXyz/ng-zorro-live-templates/issues/new) 和 PR [贡献指南](https://github.com/HsuanXyz/ng-zorro-live-templates/blob/master/CONTRIBUTING.md)
 
 
 ## 安装
