@@ -8,7 +8,7 @@ ng-zorro Live Templates for WebStorm
 
 ## 安装
 
-下载这个文件保存到你的 templates 文件夹中，然后重启 IDE
+下载[这个文件](https://raw.githubusercontent.com/HsuanXyz/ng-zorro-live-templates/master/nz-zorro/ng-zorro.xml)保存到你的 templates 文件夹中，然后重启 IDE
 
 - Windows: `<your home directory>\.<product name><version number>\config\templates`
 - Linux: `~\.<product name><version number>\config\templates`
