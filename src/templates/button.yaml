@@ -1,0 +1,51 @@
+# button - https://ng.ant.design/#/components/button
+
+nz-btn:
+  description: 按钮
+  tpl: <button $cpm$ (click)="$VAR0$">$END$</button>
+  variables:
+    - {name: 'cpm', alwaysStopAt: false, defaultValue: '"nz-button"'}
+    - {name: 'VAR0', defaultValue: ''}
+
+nz-btn-group:
+  description: 按钮组, 可以将多个 nz-button 放入 nz-button-group 的容器中
+  tpl: |-
+    <nz-button-group>$END$</nz-button-group>
+
+nz-btn-group+:
+  tpl: |-
+    <nz-button-group>
+      <button nz-button (click)="$VAR0$">$VAR1$</button>$END$
+    </nz-button-group>
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+    - {name: 'VAR1', defaultValue: ''}
+
+nz-btn:disabled:
+  tpl: |-
+     <button nz-button disabled (click)="$VAR0$">$END$</button>
+  variables:
+      - {name: 'VAR0', defaultValue: ''}
+
+nz-btn:type:
+  description: 设置按钮类型，可选值为 primary dashed danger default
+  tpl: |-
+     <button nz-button [nzType]="'$VAR0$'" (click)="$VAR1$">$END$</button>
+  variables:
+    - {name: 'VAR0', defaultValue: '"default"'}
+    - {name: 'VAR1', defaultValue: ''}
+
+nz-btn:ghost:
+  description: 设置幽灵按钮
+  tpl: |-
+    <button nz-button nzGhost (click)="$VAR0$">$END$</button>
+  variables:
+      - {name: 'VAR0', defaultValue: ''}
+
+nz-btn:loading:
+  description: 设置按钮载入状态
+  tpl: |-
+    <button nz-button [nzLoading]="$VAR0$" (click)="$VAR1$">$END$</button>
+  variables:
+    - {name: 'VAR0', defaultValue: '"isLoading"'}
+    - {name: 'VAR1', defaultValue: ''}

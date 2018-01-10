@@ -1,0 +1,5 @@
+# icon - https://ng.ant.design/#/components/icon
+
+nz-icon:
+  description: 图标
+  tpl: <i class="anticon anticon-$END$"></i>
