@@ -1,0 +1,81 @@
+# https://ng.ant.design/#/components/input-number
+
+nzInputNumber:
+  description: 字输入框
+  tpl: |-
+    <nz-input-number [(ngModel)]="$VAR0$" [nzMin]="$VAR1$" [nzMax]="$VAR2$" [nzStep]="$VAR3$"></nz-input-number>$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+    - {name: 'VAR1', defaultValue: ''}
+    - {name: 'VAR2', defaultValue: ''}
+    - {name: 'VAR3', defaultValue: ''}
+
+nzInputNumber.nzPlaceHolder:
+  description: "placeholder"
+  tpl: |-
+    [nzPlaceHolder]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzInputNumber.nzMin:
+  description: "最小值"
+  tpl: |-
+    [nzMin]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzInputNumber.nzMax:
+  description: "最大值"
+  tpl: |-
+    [nzMax]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzInputNumber.nzStep:
+  description: "每次改变步数，可以为小数"
+  tpl: |-
+    [nzStep]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzInputNumber.nzDisabled:
+  description: "禁用"
+  tpl: |-
+    [nzDisabled]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzInputNumber.nzSize:
+  description: "输入框大小"
+  tpl: |-
+    [nzSize]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"default"', expression: 'enum("small", "large", "default")'}
+
+nzInputNumber@nzBlur:
+  description: "失去焦点回调"
+  tpl: |-
+    (nzBlur)="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzInputNumber@nzFocus:
+  description: "获取焦点回调"
+  tpl: |-
+    (nzFocus)="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzInputNumber.nzFormatter:
+  description: "function(value: number | string): string 指定输入框展示值的格式 "
+  tpl: |-
+    [nzFormatter]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"fun"'}
+
+nzInputNumber.nzParser:
+  description: "指定从 nzFormatter 里转换回数字的方式，和 nzFormatter 搭配使用"
+  tpl: |-
+    [nzParser]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"fun"'}

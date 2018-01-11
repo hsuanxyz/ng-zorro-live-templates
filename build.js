@@ -110,7 +110,7 @@ function getTestString() {
     }).join('\n');
 }
 
-fs.writeFileSync('./nz-zorro/ng-zorro.xml', yaml2xml());
+fs.writeFileSync('./ng-zorro/ng-zorro.xml', yaml2xml());
 fs.writeFileSync('README.md', readme.replace(
     /(<!--DOC_START-->)[\s\S]*(<!--DOC_END-->)/g,
     function(match, $1, $2) {

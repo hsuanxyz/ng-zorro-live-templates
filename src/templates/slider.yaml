@@ -1,0 +1,98 @@
+# https://ng.ant.design/#/components/slider
+
+nzSlider:
+  description: 滑动输入条
+  tpl: |-
+    <nz-slider [nzDefaultValue]="$VAR0$" $VAR1$ [nzStep]="$VAR2$"></nz-slider>
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+    - {name: 'VAR1', defaultValue: '"nzRange"'}
+    - {name: 'VAR2', defaultValue: '"1"'}
+
+nzSlider.nzRange:
+  description: "当添加该属性时，启动双滑块模式"
+  tpl: |-
+    nzRange$END$
+  variables:
+
+nzSlider.nzMin:
+  description: "最小值"
+  tpl: |-
+    [nzMin]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzSlider.nzMax:
+  description: "最大值"
+  tpl: |-
+    [nzMax]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzSlider.nzStep:
+  description: "步长。取值必须大于 0，并且可被 (max - min) 整除。当 marks 不为空对象时，可以设置 step 为 null，此时 Slider 的可选值仅有 marks 标出来的部分。"
+  tpl: |-
+    [nzStep]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzSlider.nzMarks:
+  description: "刻度标记。key 的类型必须为 number 且取值在闭区间 [min, max] 内，每个标签可以单独设置样式。"
+  tpl: |-
+    [nzMarks]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzSlider.nzDots:
+  description: "是否只能拖拽到刻度上"
+  tpl: |-
+    [nzDots]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzSlider.ngModel:
+  description: "设置/获取当前取值。当 range 为 false 时，使用 number，否则用 [number, number]"
+  tpl: |-
+    [ngModel]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"number|number[]"'}
+
+nzSlider.nzDefaultValue:
+  description: "设置初始取值。当 range 为 false 时，使用 number，否则用 [number, number]"
+  tpl: |-
+    [nzDefaultValue]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"number|number[]"'}
+
+nzSlider.nzIncluded:
+  description: "是否包含。marks 不为空对象时有效，值为 true 时表示值为包含关系，false 表示并列"
+  tpl: |-
+    [nzIncluded]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzSlider.nzDisabled:
+  description: "是否禁用。值为 true 时，滑块为禁用状态"
+  tpl: |-
+    [nzDisabled]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzSlider.nzVertical:
+  description: "竖直显示。添加该属性时，Slider 为垂直方向。"
+  tpl: |-
+    nzVertical$END$
+
+nzSlider@nzOnAfterChange:
+  description: "与 onmouseup 触发时机一致，把当前值作为参数传入。"
+  tpl: |-
+    (nzOnAfterChange)="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzSlider.nzTipFormatter:
+  description: "Slider 会把当前值传给 nzTipFormatter，并在 Tooltip 中显示 nzTipFormatter 的返回值，若为 null，则隐藏 Tooltip。"
+  tpl: |-
+    (nzTipFormatter)="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}

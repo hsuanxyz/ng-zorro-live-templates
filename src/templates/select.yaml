@@ -1,0 +1,122 @@
+# https://ng.ant.design/#/components/select
+
+nzSelect:
+  description: 选择器
+  tpl: |-
+    <nz-select [(ngModel)]="$VAR0$" [nzPlaceHolder]="'$VAR1$'" [nzAllowClear]="true">
+      <nz-option
+        *ngFor="let $VAR2$ of $VAR3$"
+        [nzLabel]="$VAR2$.label"
+        [nzValue]="$VAR2$"
+        [nzDisabled]="$VAR2$.disabled">
+      </nz-option>$END$
+    </nz-select>
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+    - {name: 'VAR1', defaultValue: ''}
+    - {name: 'VAR2', defaultValue: '"option"'}
+    - {name: 'VAR3', defaultValue: '"options"'}
+
+nzSelectOption:
+  description: "选择器选项"
+  tpl: |-
+    <nz-option
+      [nzLabel]="$VAR0$.label"
+      [nzValue]="$VAR0$">
+    </nz-option>$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"option"'}
+
+nzSelect@nzSearchChange:
+  description: "搜索内容变化回调函数，参数为搜索内容"
+  tpl: |-
+    (nzSearchChange)="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzSelect.nzMode:
+  description: "设置 Select 的模式"
+  tpl: |-
+    [nzMode]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '""', expression: 'enum("", "multiple", "tags")'}
+
+nzSelect@nzOpenChange:
+  description: "下拉菜单打开关闭回调函数"
+  tpl: |-
+    (nzOpenChange)="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzSelect.nzFilter:
+  description: "是否根据输入过滤选项"
+  tpl: |-
+    [nzFilter]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzSelect.nzKeepUnListOptions:
+  description: "当添加该属性时，将保留不在当前选项框但已被选择的数据，仅对多选有效"
+  tpl: |-
+    nzKeepUnListOptions$END$
+
+nzSelect.nzAllowClear:
+  description: "当添加该属性时，支持清除, 单选模式有效"
+  tpl: |-
+    nzAllowClear
+
+nzSelect@nzScrollToBottom:
+  description: "下拉菜单滚动到底部回调，可用于作为动态加载的触发条件"
+  tpl: |-
+    (nzScrollToBottom)="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzSelect.nzPlaceHolder:
+  description: "选择框默认文字"
+  tpl: |-
+    [nzPlaceHolder]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzSelect.nzShowSearch:
+  description: "是否启用搜索框"
+  tpl: |-
+    [nzShowSearch]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzSelect.nzNotFoundContent:
+  description: "当下拉列表为空时显示的内容"
+  tpl: |-
+    [nzNotFoundContent]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"Not Found"'}
+
+nzSelectOption.nzLabel:
+  description: "用于显示展示的option内容"
+  tpl: |-
+    [nzLabel]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzSelectOption.nzOptionTemplate:
+  description: "用于定制下拉部分option的显示 ng-template"
+  tpl: |-
+    [nzOptionTemplate]="#$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzSelectOption.nzValue:
+  description: "option的value值，与nz-select选择option后的ngModel属性对应"
+  tpl: |-
+    [nzValue]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzSelectOption.nzDisabled:
+  description: "是否禁用"
+  tpl: |-
+    [nzDisabled]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}

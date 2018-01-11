@@ -5,7 +5,8 @@
   "main": "build.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node ./build.js"
+    "build": "node ./build.js",
+    "_cp": "cp -f ./ng-zorro/ng-zorro.xml ~/Library/Preferences/WebStorm2017.3/templates/ng-zorro.xml"
   },
   "repository": {
     "type": "git",

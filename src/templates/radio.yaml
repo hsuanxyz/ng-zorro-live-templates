@@ -1,0 +1,57 @@
+# https://ng.ant.design/#/components/radio
+
+nzRadio:
+  description: 单选框
+  tpl: |-
+    <label $cpm$ [(ngModel)]="$VAR0$">
+      <span>$VAR1$</span>
+    </label>$END$
+  variables:
+    - {name: 'cpm', alwaysStopAt: false, defaultValue: '"nz-radio"'}
+    - {name: 'VAR0', defaultValue: ''}
+    - {name: 'VAR1', defaultValue: ''}
+
+nzRadioGroup:
+  description: 单选框组
+  tpl: |-
+    <nz-radio-group [(ngModel)]="$VAR0$">
+      <label nz-radio [nzValue]="">
+        <span>$VAR1$</span>
+      </label>$END$
+    </nz-radio-group>
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+    - {name: 'VAR1', defaultValue: ''}
+
+nzRadioButtonGroup:
+  description: 按钮单选框组
+  tpl: |-
+    <nz-radio-group [(ngModel)]="$VAR0$">
+      <label nz-radio-button [nzValue]="">
+        <span>$VAR1$</span>
+      </label>$END$
+    </nz-radio-group>
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+    - {name: 'VAR1', defaultValue: ''}
+
+nzRadioGroup.nzSize:
+  description: "大小，只对按钮样式生效"
+  tpl: |-
+    [nzSize]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"default"', expression: 'enum("small", "large", "default")'}
+
+nzRadio.nzValue:
+  description: "当前Radio标示"
+  tpl: |-
+    [nzValue]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzRadio.nzDisabled:
+  description: "当前Radio是否不可选"
+  tpl: |-
+    [nzDisabled]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}

@@ -1,0 +1,34 @@
+# affix - https://ng.ant.design/#/components/checkbox
+
+nzCheckbox:
+  description: 多选框
+  tpl: |-
+    <label $cpm$ [(ngModel)]="$VAR0$">
+      <span>$VAR1$</span>
+    </label>$END$
+  variables:
+    - {name: 'cpm', alwaysStopAt: false, defaultValue: '"nz-checkbox"'}
+    - {name: 'VAR0', defaultValue: ''}
+    - {name: 'VAR1', defaultValue: ''}
+
+nzCheckboxGroup:
+  description: 多选框组
+  tpl: |-
+    <nz-checkbox-group [(ngModel)]="$VAR0$"></nz-checkbox-group>$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+
+nzCheckbox.nzIndeterminate:
+  description: "设置 indeterminate 状态，只负责样式控制"
+  tpl: |-
+    [nzIndeterminate]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzCheckbox.nzDisabled:
+  description: "是否可选"
+  tpl: |-
+    [nzDisabled]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}

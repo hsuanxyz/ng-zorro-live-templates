@@ -1,0 +1,186 @@
+# affix - https://ng.ant.design/#/components/cascader
+
+nzCascader:
+  description: 级联选择
+  tpl: <nz-cascader [nzOptions]="$VAR0$" [(ngModel)]="$VAR1$" (nzChange)="$VAR2$"></nz-cascader>$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+    - {name: 'VAR1', defaultValue: ''}
+    - {name: 'VAR2', defaultValue: ''}
+
+nzCascader.nzSize:
+  description: "输入框大小，large 高度为 32px，small 为 22px，默认是 28px"
+  tpl: |-
+    [nzSize]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"default"', expression: 'enum("small", "large", "default")'}
+
+nzCascader.nzDisabled:
+  description: "禁用"
+  tpl: |-
+    [nzDisabled]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '""'}
+
+nzCascader.nzPlaceHolder:
+  description: "输入框的默认文字"
+  tpl: |-
+    [nzPlaceHolder]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '""'}
+
+nzCascader.nzShowInput:
+  description: "显示输入框。设置为false可隐藏输入框，但需要增加自定义显示内容。"
+  tpl: |-
+    [nzShowInput]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"true"'}
+
+nzCascader.nzShowSearch:
+  description: "是否支持搜索"
+  tpl: |-
+    [nzShowSearch]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"false"'}
+
+nzCascader.nzAllowClear:
+  description: "是否显示清除按钮"
+  tpl: |-
+    [nzAllowClear]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"true"'}
+
+nzCascader.nzClearText:
+  description: "清除按钮的标题"
+  tpl: |-
+    [nzClearText]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '""'}
+
+nzCascader.nzShowArrow:
+  description: "是否显示箭头"
+  tpl: |-
+    [nzShowArrow]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"true"'}
+
+nzCascader.nzPopupClassName:
+  description: "弹出菜单的自定义样式"
+  tpl: |-
+    [nzPopupClassName]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '""'}
+
+nzCascader.nzColumnClassName:
+  description: "弹出菜单中数据列的自定义样式"
+  tpl: |-
+    [nzColumnClassName]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '""'}
+
+nzCascader.nzOptions:
+  description: "初始化列数据，用于第一列的数据，子列通过选项的 children 加载，或者通过 nzLoad事件异步加载。"
+  tpl: |-
+    [nzOptions]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '""'}
+
+nzCascader.nzEnableCache:
+  description: "是否缓存异步加载的数据，若每次异步加载的数据都是变化的，需将该值设置为 false"
+  tpl: |-
+    [nzEnableCache]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '""'}
+
+nzCascader.nzExpandTrigger:
+  description: "次级菜单的展开方式，可选 &apos;click&apos; 和 &apos;hover&apos;"
+  tpl: |-
+    [nzExpandTrigger]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"click"', expression: 'enum("click", "hover")'}
+
+nzCascader.nzChangeOnSelect:
+  description: "当此项为 true 时，点选每级菜单选项值都会发生变化，具体见上面的演示"
+  tpl: |-
+    [nzChangeOnSelect]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '""'}
+
+nzCascader@nzChangeOn:
+  description: "可通过自定义的函数来判断点击菜单选项是否应该发生变化，当函数返回 true 时，将发生变化。函数说明：(option: CascaderOption, level: number): boolean"
+  tpl: |-
+    (nzChangeOn)="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '""'}
+
+nzCascader.nzTriggerAction:
+  description: "触发菜单出现的行为，可选Array&lt;&apos;click&apos; | &apos;hover&apos;&gt;"
+  tpl: |-
+    [nzTriggerAction]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"click"', expression: 'enum("click", "hover")'}
+
+nzCascader@nzDisplayRender:
+  description: "选择后展示的渲染函数。函数说明：(label: string[], selectedOptions: CascaderOption[]) =&gt; string"
+  tpl: |-
+    (nzDisplayRender)="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '""'}
+
+nzCascader.nzValueProperty:
+  description: "值value的属性名称"
+  tpl: |-
+    [nzValueProperty]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '""'}
+
+nzCascader.nzLabelProperty:
+  description: "值label的属性名称"
+  tpl: |-
+    [nzLabelProperty]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '""'}
+
+nzCascader@nzVisibleChange:
+  description: "菜单实现或隐藏事件，参数为：(visible: boolean)"
+  tpl: |-
+    (nzVisibleChange)="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '""'}
+
+nzCascader@nzChange:
+  description: "选项值变更事件，参数为：(value: any[])"
+  tpl: |-
+    (nzChange)="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '""'}
+
+nzCascader@nzSelectionChange:
+  description: "选项变更事件，参数为：(options: CascaderOption[])"
+  tpl: |-
+    (nzSelectionChange)="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '""'}
+
+nzCascader@nzSelect:
+  description: "选项被选中事件，参数为：({ option: CascaderOption, index: number })。选项被选中，不代表值会发生变化。"
+  tpl: |-
+    (nzSelect)="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '""'}
+
+nzCascader@nzLoad:
+  description: "异步加载事件，参数为：({ option: CascaderOption, index: number, resolve: (children: CascaderOption[]) =&gt; void, reject: () =&gt; void })。"
+  tpl: |-
+    (nzLoad)="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '""'}
+
+nzCascader@nzClear:
+  description: "内容被清空事件，参数为：()。"
+  tpl: |-
+    (nzClear)="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '""'}
+
+

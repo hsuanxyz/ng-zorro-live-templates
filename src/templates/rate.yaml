@@ -1,0 +1,36 @@
+# https://ng.ant.design/#/components/rate
+
+nzRate:
+  description: 评分
+  tpl: |-
+    <nz-rate [(ngModel)]="$VAR0$"></nz-rate>$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzRate.nzCount:
+  description: "star 总数"
+  tpl: |-
+    [nzCount]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"5"'}
+
+nzRate.nzDefaultValue:
+  description: "默认值"
+  tpl: |-
+    [nzDefaultValue]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzRate.nzAllowHalf:
+  description: "当添加该属性时允许半选"
+  tpl: |-
+    [nzAllowHalf]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzRate.nzDisabled:
+  description: "只读，无法进行交互"
+  tpl: |-
+    [nzDisabled]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}

@@ -1,0 +1,130 @@
+# affix - https://ng.ant.design/#/components/transfer
+
+nzTransfer:
+  description: 时间选择框
+  tpl: |-
+    <nz-transfer
+        [nzDataSource]="$VAR0$"
+        [nzTitles]="['$VAR1$', '$VAR2$']"
+        (nzSelectChange)="$VAR3$">
+    </nz-transfer>
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+    - {name: 'VAR1', defaultValue: '"Source"'}
+    - {name: 'VAR2', defaultValue: '"Target"'}
+    - {name: 'VAR3', defaultValue: '"select($event)"'}
+
+nzTransfer.render:
+  description: 每行数据渲染模板
+  tpl: |-
+    <ng-template #render let-item>
+        {{item.$VAR0$}}
+    </ng-template>$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzTransfer.footer:
+  description: 底部渲染模板
+  tpl: |-
+    <ng-template #footer let-direction>
+        $END$
+    </ng-template>
+
+nzTransfer.nzDataSource:
+  description: "数据源，其中若数据属性direction = &apos;right&apos;将会被渲染到右边一栏中"
+  tpl: |-
+    [nzDataSource]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzTransfer.nzTitles:
+  description: "标题集合，顺序从左至右"
+  tpl: |-
+    [nzTitles]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzTransfer.nzOperations:
+  description: "操作文案集合，顺序从下至上"
+  tpl: |-
+    [nzOperations]="['$VAR0$', '$VAR1$']"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"&quot;"'}
+    - {name: 'VAR1', defaultValue: '"&quot;"'}
+
+nzTransfer.nzListStyle:
+  description: "两个穿梭框的自定义样式，以ngStyle写法标题"
+  tpl: |-
+    [nzListStyle]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzTransfer.nzItemUnit:
+  description: "单数单位"
+  tpl: |-
+    [nzItemUnit]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzTransfer.nzItemsUnit:
+  description: "复数单位"
+  tpl: |-
+    [nzItemsUnit]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzTransfer.nzShowSearch:
+  description: "是否显示搜索框"
+  tpl: |-
+    [nzShowSearch]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"true"'}
+
+nzTransfer.nzFilterOption:
+  description: "接收inputValueoption 两个参数，当 option 符合筛选条件时，应返回 true，反之则返回 false。"
+  tpl: |-
+    [nzFilterOption]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzTransfer.nzSearchPlaceholder:
+  description: "搜索框的默认值"
+  tpl: |-
+    [nzSearchPlaceholder]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzTransfer.nzNotFoundContent:
+  description: "当列表为空时显示的内容"
+  tpl: |-
+    [nzNotFoundContent]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzTransfer.canMove:
+  description: "穿梭时二次校验。&#10;注意：穿梭组件内部始终只保留一份数据，二次校验过程中需取消穿梭项则直接删除该项；具体用法见示例。&#10;&#10;"
+  tpl: |-
+    [canMove]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzTransfer@nzChange:
+  description: "选项在两栏之间转移时的回调函数"
+  tpl: |-
+    (nzChange)="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzTransfer@nzSearchChange:
+  description: "搜索框内容时改变时的回调函数"
+  tpl: |-
+    (nzSearchChange)="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzTransfer@nzSelectChange:
+  description: "选中项发生改变时的回调函数"
+  tpl: |-
+    (nzSelectChange)="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}

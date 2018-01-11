@@ -1,0 +1,69 @@
+# affix - https://ng.ant.design/#/components/time-picker
+
+nzTimePicker:
+  description: 时间选择框
+  tpl: |-
+    <nz-timepicker [(ngModel)]="$VAR0$"
+                   [nzSize]="'$VAR1$'"
+                   [nzPlaceHolder]="'$VAR2$'"
+                   [nzFormat]="'$VAR3$'">
+    </nz-timepicker>$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+    - {name: 'VAR1', defaultValue: '"default"', expression: 'enum("small", "large", "default")'}
+    - {name: 'VAR2', defaultValue: '"Select time"'}
+    - {name: 'VAR3', defaultValue: '"HH:mm:ss"', expression: 'enum("HH:mm:ss","HH:mm","mm:ss")'}
+
+nzTimePicker.nzSize:
+  description: "设置TimePicker大小"
+  tpl: |-
+    [nzSize]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"default"', expression: 'enum("small", "large", "default")'}
+
+nzTimePicker.nzPlaceHolder:
+  description: "没有值的时候显示的内容"
+  tpl: |-
+    [nzPlaceHolder]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"Select time"'}
+
+nzTimePicker.nzFormat:
+  description: "展示的时间格式"
+  tpl: |-
+    [nzFormat]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"HH:mm:ss"', expression: 'enum("HH:mm:ss","HH:mm","mm:ss")'}
+
+nzTimePicker.nzDisabled:
+  description: "禁用全部操作"
+  tpl: |-
+    [nzDisabled]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzTimePicker.nzDisabledHours:
+  description: "禁止选择部分小时选项"
+  tpl: |-
+    [nzDisabledHours]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzTimePicker.nzDisabledMinutes:
+  description: "禁止选择部分分钟选项"
+  tpl: |-
+    [nzDisabledMinutes]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzTimePicker.nzDisabledSeconds:
+  description: "禁止选择部分秒选项"
+  tpl: |-
+    [nzDisabledSeconds]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzTimePicker.nzHideDisabledOptions:
+  description: "添加该属性来隐藏禁止选择的选项"
+  tpl: |-
+    nzHideDisabledOptions$END$

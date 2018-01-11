@@ -1,0 +1,32 @@
+# affix - https://ng.ant.design/#/components/switch
+
+nzSwitch:
+  description: 开关
+  tpl: <nz-switch [(ngModel)]="$VAR0$" [nzSize]="$VAR1$"></nz-switch>$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+    - {name: 'VAR1', defaultValue: '"default"', expression: 'enum("small", "default")'}
+
+nzSwitch.nzSize:
+  description: "开关大小"
+  tpl: |-
+    [nzSize]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"default"', expression: 'enum("small", "default")'}
+
+nzSwitch.nzDisabled:
+  description: "开关是否禁用"
+  tpl: |-
+    [nzDisabled]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzSwitch.checked:
+  description: "选中时的内容"
+  tpl: |-
+    checked$END$
+
+nzSwitch.unchecked:
+  description: "非选中时的内容"
+  tpl: |-
+    unchecked$END$

@@ -1,0 +1,127 @@
+# affix - https://ng.ant.design/#/components/date-picker
+
+nzDatepicker:
+  description: 日期选择框
+  tpl: |-
+    <nz-datepicker [(ngModel)]="$VAR0$" [nzPlaceHolder]="'$VAR1$'" [nzMode]="'$VAR2$'"></nz-datepicker>$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+    - {name: 'VAR1', defaultValue: '"Select date"'}
+    - {name: 'VAR2', defaultValue: '"day"', expression: 'enum("day", "month")'}
+
+nzRangePicker:
+  description: 日期范围选择框
+  tpl: |-
+    <nz-rangepicker [(ngModel)]="$VAR0$"
+                    [nzPlaceholder]="['$VAR1$', '$VAR2$']">
+    </nz-rangepicker>$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+    - {name: 'VAR1', defaultValue: '"Select start date"'}
+    - {name: 'VAR2', defaultValue: '"Select end date"'}
+
+nzDatepicker.nzSize:
+  description: "输入框大小，large 高度为 32px，small 为 22px，默认是 28px"
+  tpl: |-
+    [nzSize]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"default"', expression: 'enum("small", "large", "default")'}
+
+nzDatepicker.nzFormat:
+  description: "展示的日期格式，配置参考 Moment.js文档"
+  tpl: |-
+    [nzFormat]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"YYYY-MM-DD"'}
+
+nzDatepicker.nzDisabled:
+  description: "禁用"
+  tpl: |-
+    [nzDisabled]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzDatepicker.nzAllowClear:
+  description: "是否显示清除按钮"
+  tpl: |-
+    [nzAllowClear]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzDatepicker.nzShowTime:
+  description: "时间选项,参见 nz-timepicker 参数"
+  tpl: |-
+    [nzShowTime]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzDatepicker.nzDisabledDate:
+  description: "用于禁用日期的回调函数，返回true表示禁用此日期"
+  tpl: |-
+    [nzDisabledDate]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzRangePicker.nzSize:
+  description: "输入框大小，large 高度为 32px，small 为 22px，默认是 28px"
+  tpl: |-
+    [nzSize]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"default"', expression: 'enum("small", "large", "default")'}
+
+nzRangePicker.nzFormat:
+  description: "展示的日期格式，配置参考 Moment.js文档"
+  tpl: |-
+    [nzFormat]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"YYYY-MM-DD"'}
+
+nzRangePicker.nzDisabled:
+  description: "禁用"
+  tpl: |-
+    [nzDisabled]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzRangePicker.nzAllowClear:
+  description: "是否显示清除按钮"
+  tpl: |-
+    [nzAllowClear]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzRangePicker.nzShowTime:
+  description: "时间选项,参见 nz-timepicker 参数"
+  tpl: |-
+    [nzShowTime]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzRangePicker.nzDisabledDate:
+  description: "用于禁用日期的回调函数，返回true表示禁用此日期"
+  tpl: |-
+    [nzDisabledDate]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzPlaceholder:
+  description: "输入框提示文字"
+  tpl: |-
+    [nzPlaceholder]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"Select date"'}
+
+nzMode:
+  description: "选择器模式， month 只选择到月份，day 选择到天"
+  tpl: |-
+    [nzMode]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"day"', expression: 'enum("day", "month")'}
+
+nzRangePicker.nzPlaceholder:
+  description: "输入框提示文字"
+  tpl: |-
+    [nzPlaceholder]="['$VAR0$', '$VAR1$']"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"Select start date"'}
+    - {name: 'VAR1', defaultValue: '"Select end date"'}

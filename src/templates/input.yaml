@@ -1,0 +1,133 @@
+# https://ng.ant.design/#/components/input
+
+nzInput:
+  description: 输入框
+  tpl: |-
+    <nz-input [(ngModel)]="$VAR0$" [nzPlaceHolder]="'$VAR1$'"></nz-input>$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+    - {name: 'VAR1', defaultValue: ''}
+
+nzInputGroup:
+  description: 输入框组
+  tpl: |-
+    <nz-input-group [nzSize]="'$VAR0$'" [nzCompact]="$VAR1$">
+      <input [(ngModel)]="" nz-input>$END$
+      <input [(ngModel)]="" nz-input>
+    </nz-input-group>
+  variables:
+    - {name: 'VAR0', defaultValue: '"default"', expression: 'enum("small", "large", "default")'}
+    - {name: 'VAR1', defaultValue: '"true"'}
+
+nzTextarea:
+  description: 文本域
+  tpl: |-
+    <nz-input [(ngModel)]="$VAR0$" [nzPlaceHolder]="'$VAR1$'" nzType="textarea"></nz-input>$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+    - {name: 'VAR1', defaultValue: ''}
+
+nzInput.nzType:
+  description: "【必须】声明 input 类型，同原生 input 标签的 type 属性。另外提供 nzType=&quot;textarea&quot;。"
+  tpl: |-
+    [nzType]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"text"', expression: 'enum("text", "email", "number", "textarea", "range", "search", "tel", "url")'}
+
+nzInput.nzPlaceHolder:
+  description: "在文字框中显示提示讯息"
+  tpl: |-
+    [nzPlaceHolder]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzInput.nzSize:
+  description: "控件大小，默认值为 default 。注：标准表单内的输入框大小限制为 large。"
+  tpl: |-
+    [nzSize]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"default"', expression: 'enum("small", "large", "default")'}
+
+nzInput.nzDisabled:
+  description: "是否禁用状态，默认为 false"
+  tpl: |-
+    [nzDisabled]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzInput.nzReadonly:
+  description: "是否只读状态，默认为 false"
+  tpl: |-
+    [nzReadonly]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzInput@nzBlur:
+  description: "失去焦点回调"
+  tpl: |-
+    (nzBlur)="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzInput@nzFocus:
+  description: "获取焦点回调"
+  tpl: |-
+    (nzFocus)="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzInput.addonBefore:
+  description: "设置前置标签 ng-template"
+  tpl: |-
+    [addonBefore]="#$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzInput.addonAfter:
+  description: "设置后置标签 ng-template"
+  tpl: |-
+    [addonAfter]="#$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzInput.prefix:
+  description: "带有前缀图标的 input ng-template"
+  tpl: |-
+    [prefix]="#$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzInput.suffix:
+  description: "#带有后缀图标的 input ng-template"
+  tpl: |-
+    [suffix]="#$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzInput.nzAutosize:
+  description: "自适应内容高度，可设置为 true|false 或对象：{ minRows: 2, maxRows: 6 }"
+  tpl: |-
+    [nzAutosize]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzInput.nzRows:
+  description: "控制固定框的行数"
+  tpl: |-
+    [nzRows]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzInputGroup.nzSize:
+  description: "nz-input-group 中所有的 nz-input 的大小"
+  tpl: |-
+    [nzSize]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"default"', expression: 'enum("small", "large", "default")'}
+
+nzInput.nzCompact:
+  description: "是否用紧凑模式"
+  tpl: |-
+    [nzCompact]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"true"'}
