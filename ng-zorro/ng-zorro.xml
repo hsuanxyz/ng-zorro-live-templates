@@ -1579,7 +1579,7 @@
             </context>
         </template>
         <template
-                name="nzPlaceholder"
+                name="nzDatepicker.nzPlaceholder"
                 value="[nzPlaceholder]=&quot;$VAR0$&quot;$END$"
                 description="输入框提示文字"
                 toReformat="true"
@@ -1592,7 +1592,7 @@
             </context>
         </template>
         <template
-                name="nzMode"
+                name="nzDatepicker.nzMode"
                 value="[nzMode]=&quot;$VAR0$&quot;$END$"
                 description="选择器模式， month 只选择到月份，day 选择到天"
                 toReformat="true"

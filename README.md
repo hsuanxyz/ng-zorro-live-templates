@@ -173,8 +173,8 @@ ng-zorro Live Templates for WebStorm
 | `nzRangePicker.nzAllowClear` | "是否显示清除按钮" |
 | `nzRangePicker.nzShowTime` | "时间选项,参见 nz-timepicker 参数" |
 | `nzRangePicker.nzDisabledDate` | "用于禁用日期的回调函数，返回true表示禁用此日期" |
-| `nzPlaceholder` | "输入框提示文字" |
-| `nzMode` | "选择器模式， month 只选择到月份，day 选择到天" |
+| `nzDatepicker.nzPlaceholder` | "输入框提示文字" |
+| `nzDatepicker.nzMode` | "选择器模式， month 只选择到月份，day 选择到天" |
 | `nzRangePicker.nzPlaceholder` | "输入框提示文字" |
 | `nzDropdown` | "下拉菜单" |
 | `nzDropdownButton` | "下拉菜单 按钮样式" |

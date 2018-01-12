@@ -104,14 +104,14 @@ nzRangePicker.nzDisabledDate:
   variables:
     - {name: 'VAR0', defaultValue: ''}
 
-nzPlaceholder:
+nzDatepicker.nzPlaceholder:
   description: "输入框提示文字"
   tpl: |-
     [nzPlaceholder]="$VAR0$"$END$
   variables:
     - {name: 'VAR0', defaultValue: '"Select date"'}
 
-nzMode:
+nzDatepicker.nzMode:
   description: "选择器模式， month 只选择到月份，day 选择到天"
   tpl: |-
     [nzMode]="$VAR0$"$END$
