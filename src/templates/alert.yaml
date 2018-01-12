@@ -1,0 +1,79 @@
+# https://ng.ant.design/#/components/alert
+
+nzAlert:
+  description:  警告提示
+  tpl: |-
+    <nz-alert [nzType]="'$VAR0$'" $VAR1$>
+      <span alert-body>
+        <pre>$END$</pre>
+      </span>
+    </nz-alert>
+  variables:
+    - {name: 'VAR0', defaultValue: '"info"', expression: 'enum("success", "info", "warning", "error")'}
+    - {name: 'VAR1', defaultValue: '"nzCloseable"'}
+
+nzAlert.nzType:
+  description: "必选参数，指定警告提示的样式，有四种选择 success、info、warning、error"
+  tpl: |-
+    [nzType]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"info"', expression: 'enum("success", "info", "warning", "error")'}
+
+nzAlert.nzCloseable:
+  description: "可选参数，默认不显示关闭按钮"
+  tpl: |-
+    [nzCloseable]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"true"'}
+
+nzAlert.nzCloseText:
+  description: "可选参数，自定义关闭按钮"
+  tpl: |-
+    [nzCloseText]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzAlert.nzMessage:
+  description: "与alert-body标签二选一，警告提示内容"
+  tpl: |-
+    [nzMessage]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzAlert.nzDescription:
+  description: "可选参数，警告提示的辅助性文字介绍"
+  tpl: |-
+    [nzDescription]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzAlert@nzOnClose:
+  description: "可选参数，关闭时触发的回调函数"
+  tpl: |-
+    (nzOnClose)="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzAlert.nzShowIcon:
+  description: "可选参数，是否显示辅助图标"
+  tpl: |-
+    [nzShowIcon]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"true"'}
+
+nzAlert.nzBanner:
+  description: "是否用作顶部公告"
+  tpl: |-
+    [nzBanner]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"false"'}
+
+nzAlert.alert-body:
+  description: "与nzMessage二选一，定义Message"
+  tpl: |-
+    alert-body$END$
+
+nzAlert.alert-description:
+  description: "可选参数，定义Description"
+  tpl: |-
+    alert-description$END$

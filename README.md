@@ -56,12 +56,35 @@ ng-zorro Live Templates for WebStorm
 | `nzAffix@nzChange` | "固定状态改变时触发的回调函数" |
 | `nzAffix.nzOffsetTop` | "距离窗口顶部达到指定偏移量后触发" |
 | `nzAffix.nzTarget` | "设置需要监听其滚动事件的元素，值为一个返回对应 DOM 元素的函数" |
+| `nzAlert` | "警告提示" |
+| `nzAlert.nzType` | "必选参数，指定警告提示的样式，有四种选择 success、info、warning、error" |
+| `nzAlert.nzCloseable` | "可选参数，默认不显示关闭按钮" |
+| `nzAlert.nzCloseText` | "可选参数，自定义关闭按钮" |
+| `nzAlert.nzMessage` | "与alert-body标签二选一，警告提示内容" |
+| `nzAlert.nzDescription` | "可选参数，警告提示的辅助性文字介绍" |
+| `nzAlert@nzOnClose` | "可选参数，关闭时触发的回调函数" |
+| `nzAlert.nzShowIcon` | "可选参数，是否显示辅助图标" |
+| `nzAlert.nzBanner` | "是否用作顶部公告" |
+| `nzAlert.alert-body` | "与nzMessage二选一，定义Message" |
+| `nzAlert.alert-description` | "可选参数，定义Description" |
+| `nzAnchor` | "锚点 - 用于跳转到页面指定位置。" |
+| `nzAnchorLink` | "锚点 - 用于跳转到页面指定位置。" |
+| `nzAnchor.nzOffsetTop` | "距离窗口顶部达到指定偏移量后触发" |
+| `nzAnchor.nzBounds` | "锚点区域边界" |
+| `nzAnchor.nzScroll` | "滚动至某锚点时触发" |
+| `nzAnchorLink.nzHref` | "锚点链接" |
+| `nzAnchorLink.nzTitle` | "文字内容" |
 | `nzAvatar` | "头像 - 用来代表用户或事物，支持图片、图标或字符展示。" |
 | `nzAvatar.nzShape` | "指定头像的形状" |
 | `nzAvatar.nzSize` | "设置头像的大小" |
 | `nzAvatar.nzText` | "文本类头像" |
 | `nzAvatar.nzSrc` | "图片类头像的资源地址；倘若图片加载失败，自动显示 nzIcon &gt; nzText。" |
 | `nzAvatar.nzIcon` | "设置头像的图标类型，参考 icon 组件" |
+| `BackTop` | "回到顶部" |
+| `BackTop.nzTemplate` | "自定义内容，见示例" |
+| `BackTop.nzVisibilityHeight` | "滚动高度达到此参数值才出现 nz-back-top" |
+| `BackTop@nzClick` | "点击按钮的回调函数" |
+| `BackTop.nzTarget` | "设置需要监听其滚动事件的元素，值为一个返回对应 DOM 元素的函数" |
 | `nzBadge` | "徽标数 - 图标右上角的圆形徽标数字" |
 | `nzBadge-dot` | "徽标数 - 只显示圆点" |
 | `nzBadge-status` | "徽标数 - 带文字状态点" |
@@ -228,6 +251,22 @@ ng-zorro Live Templates for WebStorm
 | `nzMenuSubmenu.nzOpen` | "submenu是否展开，可双向绑定" |
 | `nzMenuSubmenu@nzOpenChange` | "submenu展开关闭回调" |
 | `nzMenuItem.nzSelected` | "当前菜单项是否被选中" |
+| `nzModal` | "对话框 - 模态对话框。" |
+| `nzModal.nzVisible` | "对话框是否可见" |
+| `nzModal.nzConfirmLoading` | "确定按钮 loading" |
+| `nzModal.nzTitle` | "标题" |
+| `nzModal.nzClosable` | "是否显示右上角的关闭按钮" |
+| `nzModal.nzBody` | "内容" |
+| `nzModal@nzOnOk` | "点击确定回调" |
+| `nzModal@nzOnCancel` | "点击遮罩层或右上角叉或取消按钮的回调" |
+| `nzModal.nzWidth` | "宽度" |
+| `nzModal.nzFooter` | "底部内容" |
+| `nzModal.nzOkText` | "确认按钮文字" |
+| `nzModal.nzCancelText` | "取消按钮文字" |
+| `nzModal.nzMaskClosable` | "点击蒙层是否允许关闭" |
+| `nzModal.nzZIndex` | "Modal zIndex属性，用于决定显示先后次序" |
+| `nzModal.nzStyle` | "可用于设置浮层的样式，调整浮层位置等" |
+| `nzModal.nzWrapClassName` | "对话框外层容器的类名" |
 | `nzPagination` | "分页" |
 | `nzPagination.nzPageIndex` | "当前页数(双向绑定)" |
 | `nzPagination.nzTotal` | "数据总数" |
@@ -238,6 +277,21 @@ ng-zorro Live Templates for WebStorm
 | `nzPagination.nzSize` | "当为「small」时，是小尺寸分页" |
 | `nzPagination.nzSimple` | "当添加该属性时，显示为简单分页" |
 | `nzPagination.nzShowTotal` | "当添加该属性时，显示总共有多少条数据" |
+| `nzPopconfirm` | "气泡确认框" |
+| `nzPopconfirm.nzTitle` | "确认框描述" |
+| `nzPopconfirm@nzOnConfirm` | "点击确认的回调" |
+| `nzPopconfirm@nzOnCancel` | "点击取消的回调" |
+| `nzPopconfirm.nzOkText` | "确认按钮文字" |
+| `nzPopconfirm.nzCancelText` | "取消按钮文字" |
+| `nzPopconfirm.nzCondition` | "是否直接执行确定方法" |
+| `nzPopconfirm.nzPlacement` | "气泡框位置" |
+| `nzPopconfirm.nzVisible` | "用于手动控制浮层显隐 双向绑定" |
+| `nzPopconfirm@nzVisibleChange` | "显示隐藏的回调" |
+| `nzPopconfirm.nzTrigger` | "触发行为，可选 hover/focus/click" |
+| `nzPopconfirm.nzOverlayClassName` | "卡片类名" |
+| `nzPopconfirm.nzOverlayStyle` | "卡片样式" |
+| `nzPopconfirm.nzMouseEnterDelay` | "鼠标移入后延时多少才显示 Tooltip，单位：秒（nzTrigger=&apos;hover&apos;时有效）" |
+| `nzPopconfirm.nzMouseLeaveDelay` | "鼠标移出后延时多少才隐藏 Tooltip，单位：秒（nzTrigger=&apos;hover&apos;时有效）" |
 | `nzPopover` | "气泡卡片 - 点击/鼠标移入元素，弹出气泡式的卡片浮层。" |
 | `nzPopover.nzPlacement` | "气泡框位置，可选" |
 | `nzPopover.nzTemplate` | "用于定义Content内容" |
@@ -248,6 +302,14 @@ ng-zorro Live Templates for WebStorm
 | `nzPopover.nzOverlayStyle` | "卡片样式" |
 | `nzPopover.nzMouseEnterDelay` | "鼠标移入后延时多少才显示 Tooltip，单位：秒（nzTrigger=&apos;hover&apos;时有效）" |
 | `nzPopover.nzMouseLeaveDelay` | "鼠标移出后延时多少才隐藏 Tooltip，单位：秒（nzTrigger=&apos;hover&apos;时有效）" |
+| `nzProgress` | "进度条 - 展示操作的当前进度。" |
+| `nzProgress.nzType` | "类型，可选 linecircle" |
+| `nzProgress.nzFormat` | "内容的模板函数" |
+| `nzProgress.nzStatus` | "状态，可选：success exception active" |
+| `nzProgress.nzShowInfo` | "是否显示进度数值或状态图标" |
+| `nzProgress.nzStrokeWidthLine` | "进度条线的宽度，单位 px" |
+| `nzProgress.nzStrokeWidthCircle` | "圆形进度条线的宽度，单位是进度条画布宽度的百分比" |
+| `nzProgress.nzWidth` | "圆形进度条画布宽度，单位 px" |
 | `nzRadio` | "单选框" |
 | `nzRadioGroup` | "单选框组" |
 | `nzRadioButtonGroup` | "按钮单选框组" |
@@ -289,6 +351,10 @@ ng-zorro Live Templates for WebStorm
 | `nzSlider.nzVertical` | "竖直显示。添加该属性时，Slider 为垂直方向。" |
 | `nzSlider@nzOnAfterChange` | "与 onmouseup 触发时机一致，把当前值作为参数传入。" |
 | `nzSlider.nzTipFormatter` | "Slider 会把当前值传给 nzTipFormatter，并在 Tooltip 中显示 nzTipFormatter 的返回值，若为 null，则隐藏 Tooltip。" |
+| `nzSpin` | "加载中 - 用于页面和区块的加载中状态。" |
+| `nzSpin.nzSize` | "spin组件中点的大小，可选值为 small default large" |
+| `nzSpin.nzSpinning` | "用于内嵌其他组件的模式，可以关闭 loading 效果" |
+| `nzSpin.nzTip` | "自定义描述文案" |
 | `nzSteps` | "步骤条" |
 | `nzSteps+` | "步骤条" |
 | `nzStep` | "步骤条子项" |

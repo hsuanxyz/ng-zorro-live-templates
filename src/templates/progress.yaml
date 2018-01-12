@@ -1,0 +1,58 @@
+# https://ng.ant.design/#/components/progress
+
+nzProgress:
+  description: 进度条 - 展示操作的当前进度。
+  tpl: <nz-progress [ngModel]="$VAR0$" [nzType]="'$VAR1$'"></nz-progress>$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+    - {name: 'VAR1', defaultValue: '"line"', expression: 'enum("line", "circle")'}
+
+nzProgress.nzType:
+  description: "类型，可选 linecircle"
+  tpl: |-
+    [nzType]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"line"', expression: 'enum("line", "circle")'}
+
+nzProgress.nzFormat:
+  description: "内容的模板函数"
+  tpl: |-
+    [nzFormat]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzProgress.nzStatus:
+  description: "状态，可选：success exception active"
+  tpl: |-
+    [nzStatus]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '""', expression: 'enum("success", "exception", "active")'}
+
+nzProgress.nzShowInfo:
+  description: "是否显示进度数值或状态图标"
+  tpl: |-
+    [nzShowInfo]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"true"'}
+
+nzProgress.nzStrokeWidthLine:
+  description: "进度条线的宽度，单位 px"
+  tpl: |-
+    [nzStrokeWidth]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"10"'}
+
+nzProgress.nzStrokeWidthCircle:
+  description: "圆形进度条线的宽度，单位是进度条画布宽度的百分比"
+  tpl: |-
+    [nzStrokeWidth]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"6"'}
+
+nzProgress.nzWidth:
+  description: "圆形进度条画布宽度，单位 px"
+  tpl: |-
+    [nzWidth]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"132"'}
+

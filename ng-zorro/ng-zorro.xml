@@ -49,6 +49,239 @@
             </context>
         </template>
         <template
+                name="nzAlert"
+                value="&lt;nz-alert [nzType]=&quot;&apos;$VAR0$&apos;&quot; $VAR1$&gt;&#10;  &lt;span alert-body&gt;&#10;    &lt;pre&gt;$END$&lt;/pre&gt;&#10;  &lt;/span&gt;&#10;&lt;/nz-alert&gt;"
+                description="警告提示"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="enum(&quot;success&quot;, &quot;info&quot;, &quot;warning&quot;, &quot;error&quot;)" defaultValue="&quot;info&quot;" alwaysStopAt="true" />
+            <variable name="VAR1" expression="" defaultValue="&quot;nzCloseable&quot;" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzAlert.nzType"
+                value="[nzType]=&quot;&apos;$VAR0$&apos;&quot;$END$"
+                description="必选参数，指定警告提示的样式，有四种选择 success、info、warning、error"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="enum(&quot;success&quot;, &quot;info&quot;, &quot;warning&quot;, &quot;error&quot;)" defaultValue="&quot;info&quot;" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzAlert.nzCloseable"
+                value="[nzCloseable]=&quot;$VAR0$&quot;$END$"
+                description="可选参数，默认不显示关闭按钮"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="&quot;true&quot;" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzAlert.nzCloseText"
+                value="[nzCloseText]=&quot;$VAR0$&quot;$END$"
+                description="可选参数，自定义关闭按钮"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzAlert.nzMessage"
+                value="[nzMessage]=&quot;&apos;$VAR0$&apos;&quot;$END$"
+                description="与alert-body标签二选一，警告提示内容"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzAlert.nzDescription"
+                value="[nzDescription]=&quot;&apos;$VAR0$&apos;&quot;$END$"
+                description="可选参数，警告提示的辅助性文字介绍"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzAlert@nzOnClose"
+                value="(nzOnClose)=&quot;$VAR0$&quot;$END$"
+                description="可选参数，关闭时触发的回调函数"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzAlert.nzShowIcon"
+                value="[nzShowIcon]=&quot;$VAR0$&quot;$END$"
+                description="可选参数，是否显示辅助图标"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="&quot;true&quot;" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzAlert.nzBanner"
+                value="[nzBanner]=&quot;$VAR0$&quot;$END$"
+                description="是否用作顶部公告"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="&quot;false&quot;" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzAlert.alert-body"
+                value="alert-body$END$"
+                description="与nzMessage二选一，定义Message"
+                toReformat="true"
+                toShortenFQNames="true">
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzAlert.alert-description"
+                value="alert-description$END$"
+                description="可选参数，定义Description"
+                toReformat="true"
+                toShortenFQNames="true">
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzAnchor"
+                value="&lt;nz-anchor&gt;&#10;    $END$&#10;&lt;/nz-anchor&gt;"
+                description="锚点 - 用于跳转到页面指定位置。"
+                toReformat="true"
+                toShortenFQNames="true">
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzAnchorLink"
+                value="&lt;nz-link [nzHref]=&quot;&apos;#$VAR0$&apos;&quot; [nzTitle]=&quot;&apos;$VAR1$&apos;&quot;&gt;&#10;    $END$&#10;&lt;/nz-link&gt;"
+                description="锚点 - 用于跳转到页面指定位置。"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="" alwaysStopAt="true" />
+            <variable name="VAR1" expression="" defaultValue="" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzAnchor.nzOffsetTop"
+                value="[nzOffsetTop]=&quot;$VAR0$&quot;$END$"
+                description="距离窗口顶部达到指定偏移量后触发"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzAnchor.nzBounds"
+                value="[nzBounds]=&quot;$VAR0$&quot;$END$"
+                description="锚点区域边界"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzAnchor.nzScroll"
+                value="[nzScroll]=&quot;$VAR0$&quot;$END$"
+                description="滚动至某锚点时触发"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzAnchorLink.nzHref"
+                value="[nzHref]=&quot;&apos;#$VAR0$&apos;&quot;$END$"
+                description="锚点链接"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzAnchorLink.nzTitle"
+                value="[nzTitle]=&quot;&apos;$VAR0$&apos;&quot;$END$"
+                description="文字内容"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
                 name="nzAvatar"
                 value="&lt;nz-avatar nzShape=&quot;$VAR0$&quot; nzSize=&quot;$VAR1$&quot; [nzSrc]=&quot;&apos;$VAR2$&apos;&quot;&gt;&lt;/nz-avatar&gt;"
                 description="头像 - 用来代表用户或事物，支持图片、图标或字符展示。"
@@ -122,6 +355,70 @@
                 toReformat="true"
                 toShortenFQNames="true">
             <variable name="VAR0" expression="enum(&quot;step-backward&quot;, &quot;step-forward&quot;, &quot;fast-backward&quot;, &quot;fast-forward&quot;, &quot;shrink&quot;, &quot;arrows-alt&quot;, &quot;down&quot;, &quot;up&quot;, &quot;left&quot;, &quot;right&quot;, &quot;caret-up&quot;, &quot;caret-down&quot;, &quot;caret-left&quot;, &quot;caret-right&quot;, &quot;up-circle&quot;, &quot;down-circle&quot;, &quot;left-circle&quot;, &quot;right-circle&quot;, &quot;up-circle-o&quot;, &quot;down-circle-o&quot;, &quot;right-circle-o&quot;, &quot;left-circle-o&quot;, &quot;double-right&quot;, &quot;double-left&quot;, &quot;verticle-left&quot;, &quot;verticle-right&quot;, &quot;forward&quot;, &quot;backward&quot;, &quot;rollback&quot;, &quot;enter&quot;, &quot;retweet&quot;, &quot;swap&quot;, &quot;swap-left&quot;, &quot;swap-right&quot;, &quot;arrow-up&quot;, &quot;arrow-down&quot;, &quot;arrow-left&quot;, &quot;arrow-right&quot;, &quot;play-circle&quot;, &quot;play-circle-o&quot;, &quot;up-square&quot;, &quot;down-square&quot;, &quot;left-square&quot;, &quot;right-square&quot;, &quot;up-square-o&quot;, &quot;down-square-o&quot;, &quot;left-square-o&quot;, &quot;right-square-o&quot;, &quot;login&quot;, &quot;logout&quot;, &quot;menu-fold&quot;, &quot;menu-unfold&quot;, &quot;question&quot;, &quot;question-circle-o&quot;, &quot;question-circle&quot;, &quot;plus&quot;, &quot;plus-circle-o&quot;, &quot;plus-circle&quot;, &quot;pause&quot;, &quot;pause-circle-o&quot;, &quot;pause-circle&quot;, &quot;minus&quot;, &quot;minus-circle-o&quot;, &quot;minus-circle&quot;, &quot;plus-square&quot;, &quot;plus-square-o&quot;, &quot;minus-square&quot;, &quot;minus-square-o&quot;, &quot;info&quot;, &quot;info-circle-o&quot;, &quot;info-circle&quot;, &quot;exclamation&quot;, &quot;exclamation-circle-o&quot;, &quot;exclamation-circle&quot;, &quot;close&quot;, &quot;close-circle&quot;, &quot;close-circle-o&quot;, &quot;close-square&quot;, &quot;close-square-o&quot;, &quot;check&quot;, &quot;check-circle&quot;, &quot;check-circle-o&quot;, &quot;check-square&quot;, &quot;check-square-o&quot;, &quot;clock-circle-o&quot;, &quot;clock-circle&quot;, &quot;lock&quot;, &quot;unlock&quot;, &quot;area-chart&quot;, &quot;pie-chart&quot;, &quot;bar-chart&quot;, &quot;dot-chart&quot;, &quot;bars&quot;, &quot;book&quot;, &quot;calendar&quot;, &quot;cloud&quot;, &quot;cloud-download&quot;, &quot;code&quot;, &quot;code-o&quot;, &quot;copy&quot;, &quot;credit-card&quot;, &quot;delete&quot;, &quot;desktop&quot;, &quot;download&quot;, &quot;edit&quot;, &quot;ellipsis&quot;, &quot;file&quot;, &quot;file-text&quot;, &quot;file-unknown&quot;, &quot;file-pdf&quot;, &quot;file-excel&quot;, &quot;file-jpg&quot;, &quot;file-ppt&quot;, &quot;file-add&quot;, &quot;folder&quot;, &quot;folder-open&quot;, &quot;folder-add&quot;, &quot;hdd&quot;, &quot;frown&quot;, &quot;frown-o&quot;, &quot;meh&quot;, &quot;meh-o&quot;, &quot;smile&quot;, &quot;smile-o&quot;, &quot;inbox&quot;, &quot;laptop&quot;, &quot;appstore-o&quot;, &quot;appstore&quot;, &quot;line-chart&quot;, &quot;link&quot;, &quot;mail&quot;, &quot;mobile&quot;, &quot;notification&quot;, &quot;paper-clip&quot;, &quot;picture&quot;, &quot;poweroff&quot;, &quot;reload&quot;, &quot;search&quot;, &quot;setting&quot;, &quot;share-alt&quot;, &quot;shopping-cart&quot;, &quot;tablet&quot;, &quot;tag&quot;, &quot;tag-o&quot;, &quot;tags&quot;, &quot;tags-o&quot;, &quot;to-top&quot;, &quot;upload&quot;, &quot;user&quot;, &quot;video-camera&quot;, &quot;home&quot;, &quot;loading&quot;, &quot;loading-3-quarters&quot;, &quot;cloud-upload-o&quot;, &quot;cloud-download-o&quot;, &quot;cloud-upload&quot;, &quot;cloud-o&quot;, &quot;star-o&quot;, &quot;star&quot;, &quot;heart-o&quot;, &quot;heart&quot;, &quot;environment&quot;, &quot;environment-o&quot;, &quot;eye&quot;, &quot;eye-o&quot;, &quot;camera&quot;, &quot;camera-o&quot;, &quot;save&quot;, &quot;team&quot;, &quot;solution&quot;, &quot;phone&quot;, &quot;filter&quot;, &quot;exception&quot;, &quot;export&quot;, &quot;customer-service&quot;, &quot;qrcode&quot;, &quot;scan&quot;, &quot;like&quot;, &quot;like-o&quot;, &quot;dislike&quot;, &quot;dislike-o&quot;, &quot;message&quot;, &quot;pay-circle&quot;, &quot;pay-circle-o&quot;, &quot;calculator&quot;, &quot;pushpin&quot;, &quot;pushpin-o&quot;, &quot;bulb&quot;, &quot;select&quot;, &quot;switcher&quot;, &quot;rocket&quot;, &quot;bell&quot;, &quot;disconnect&quot;, &quot;database&quot;, &quot;compass&quot;, &quot;barcode&quot;, &quot;hourglass&quot;, &quot;key&quot;, &quot;flag&quot;, &quot;layout&quot;, &quot;printer&quot;, &quot;sound&quot;, &quot;usb&quot;, &quot;skin&quot;, &quot;tool&quot;, &quot;sync&quot;, &quot;wifi&quot;, &quot;car&quot;, &quot;schedule&quot;, &quot;user-add&quot;, &quot;user-delete&quot;, &quot;usergroup-add&quot;, &quot;usergroup-delete&quot;, &quot;man&quot;, &quot;woman&quot;, &quot;shop&quot;, &quot;gift&quot;, &quot;idcard&quot;, &quot;medicine-box&quot;, &quot;red-envelope&quot;, &quot;coffee&quot;, &quot;copyright&quot;, &quot;trademark&quot;, &quot;safety&quot;, &quot;wallet&quot;, &quot;bank&quot;, &quot;trophy&quot;, &quot;contacts&quot;, &quot;global&quot;, &quot;shake&quot;, &quot;api&quot;, &quot;fork&quot;, &quot;android&quot;, &quot;android-o&quot;, &quot;apple&quot;, &quot;apple-o&quot;, &quot;windows&quot;, &quot;windows-o&quot;, &quot;ie&quot;, &quot;chrome&quot;, &quot;github&quot;, &quot;aliwangwang&quot;, &quot;aliwangwang-o&quot;, &quot;dingding&quot;, &quot;dingding-o&quot;)" defaultValue="" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="BackTop"
+                value="&lt;nz-back-top&gt;&lt;/nz-back-top&gt;"
+                description="回到顶部"
+                toReformat="true"
+                toShortenFQNames="true">
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="BackTop.nzTemplate"
+                value="nzTemplate"
+                description="自定义内容，见示例"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="BackTop.nzVisibilityHeight"
+                value="[nzVisibilityHeight]=&quot;$VAR0$&quot;$END$"
+                description="滚动高度达到此参数值才出现 nz-back-top"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="BackTop@nzClick"
+                value="(nzClick)=&quot;$VAR0$&quot;$END$"
+                description="点击按钮的回调函数"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="BackTop.nzTarget"
+                value="[nzTarget]=&quot;$VAR0$&quot;$END$"
+                description="设置需要监听其滚动事件的元素，值为一个返回对应 DOM 元素的函数"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="" alwaysStopAt="true" />
             <context>
                 <option name="HTML" value="true" />
                 <option name="MARKDOWN" value="true" />
@@ -2286,6 +2583,213 @@
             </context>
         </template>
         <template
+                name="nzModal"
+                value="&lt;nz-modal&#10;    [(nzVisible)]=&quot;isVisible&quot;&#10;    [nzConfirmLoading]=&quot;false|true&quot;&#10;    [nzTitle]=&quot;&apos;标题&apos;&quot;&#10;    [nzClosable]=&quot;false|true&quot;&#10;    [nzBody]=&quot;&apos;这是内容&apos;&quot;&#10;    [nzWidth]=&quot;520&quot;&#10;    [nzContent]=&quot;modalContent&quot;&#10;    [nzOkText]=&quot;&apos;确定&apos;&quot;&#10;    [nzCancelText]=&quot;&apos;取消&apos;&quot;&#10;    [nzMaskClosable]=&quot;false|true&quot;&#10;    [nzZIndex]=&quot;1000&quot;&#10;    [nzStyle]=&quot;{}&quot;&#10;    [nzWrapClassName]=&quot;&apos;&apos;&quot;&#10;    (nzOnCancel)=&quot;handleCancel($event)&quot;&#10;    (nzOnOk)=&quot;handleOk($event)&quot;&gt;&#10;    &lt;ng-template #modalContent&gt;$END$&lt;/ng-template&gt;&#10;&lt;/nz-modal&gt;"
+                description="对话框 - 模态对话框。"
+                toReformat="true"
+                toShortenFQNames="true">
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzModal.nzVisible"
+                value="[nzVisible]=&quot;$VAR0$&quot;$END$"
+                description="对话框是否可见"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzModal.nzConfirmLoading"
+                value="[nzConfirmLoading]=&quot;$VAR0$&quot;$END$"
+                description="确定按钮 loading"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="&quot;true&quot;" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzModal.nzTitle"
+                value="[nzTitle]=&quot;$VAR0$&quot;$END$"
+                description="标题"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzModal.nzClosable"
+                value="[nzClosable]=&quot;$VAR0$&quot;$END$"
+                description="是否显示右上角的关闭按钮"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="&quot;true&quot;" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzModal.nzBody"
+                value="[nzBody]=&quot;$VAR0$&quot;$END$"
+                description="内容"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzModal@nzOnOk"
+                value="(nzOnOk)=&quot;$VAR0$&quot;$END$"
+                description="点击确定回调"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzModal@nzOnCancel"
+                value="(nzOnCancel)=&quot;$VAR0$&quot;$END$"
+                description="点击遮罩层或右上角叉或取消按钮的回调"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzModal.nzWidth"
+                value="[nzWidth]=&quot;$VAR0$&quot;$END$"
+                description="宽度"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="&quot;520&quot;" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzModal.nzFooter"
+                value="[nzFooter]=&quot;$VAR0$&quot;$END$"
+                description="底部内容"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzModal.nzOkText"
+                value="[nzOkText]=&quot;&apos;$VAR0$&apos;&quot;$END$"
+                description="确认按钮文字"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="&quot;确认&quot;" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzModal.nzCancelText"
+                value="[nzCancelText]=&quot;&apos;$VAR0$&apos;&quot;$END$"
+                description="取消按钮文字"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="&quot;取消&quot;" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzModal.nzMaskClosable"
+                value="[nzMaskClosable]=&quot;$VAR0$&quot;$END$"
+                description="点击蒙层是否允许关闭"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="&quot;true&quot;" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzModal.nzZIndex"
+                value="[nzZIndex]=&quot;$VAR0$&quot;$END$"
+                description="Modal zIndex属性，用于决定显示先后次序"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="&quot;1000&quot;" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzModal.nzStyle"
+                value="[nzStyle]=&quot;$VAR0$&quot;$END$"
+                description="可用于设置浮层的样式，调整浮层位置等"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzModal.nzWrapClassName"
+                value="[nzWrapClassName]=&quot;&apos;$VAR0$&apos;&quot;$END$"
+                description="对话框外层容器的类名"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
                 name="nzPagination"
                 value="&lt;nz-pagination [nzPageIndex]=&quot;$VAR0$&quot; [nzTotal]=&quot;$VAR1$&quot; [nzPageSize]=&quot;$VAR2$&quot;&gt;&lt;/nz-pagination&gt;"
                 description="分页"
@@ -2403,6 +2907,203 @@
                 description="当添加该属性时，显示总共有多少条数据"
                 toReformat="true"
                 toShortenFQNames="true">
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzPopconfirm"
+                value="&lt;nz-popconfirm [nzTitle]=&quot;&apos;$VAR0$&apos;&quot; (nzOnConfirm)=&quot;$VAR1$&quot; (nzOnCancel)=&quot;$VAR2$&quot;&gt;&#10;  &lt;a nz-popconfirm&gt;$END$&lt;/a&gt;&#10;&lt;/nz-popconfirm&gt;"
+                description="气泡确认框"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="" alwaysStopAt="true" />
+            <variable name="VAR1" expression="" defaultValue="&quot;confirm()&quot;" alwaysStopAt="true" />
+            <variable name="VAR2" expression="" defaultValue="&quot;cancel()&quot;" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzPopconfirm.nzTitle"
+                value="[nzTitle]=&quot;&apos;$VAR0$&apos;&quot;$END$"
+                description="确认框描述"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzPopconfirm@nzOnConfirm"
+                value="(nzOnConfirm)=&quot;$VAR0$&quot;$END$"
+                description="点击确认的回调"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzPopconfirm@nzOnCancel"
+                value="(nzOnCancel)=&quot;$VAR0$&quot;$END$"
+                description="点击取消的回调"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzPopconfirm.nzOkText"
+                value="[nzOkText]=&quot;&apos;$VAR0$&apos;&quot;$END$"
+                description="确认按钮文字"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzPopconfirm.nzCancelText"
+                value="[nzCancelText]=&quot;&apos;$VAR0$&apos;&quot;$END$"
+                description="取消按钮文字"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzPopconfirm.nzCondition"
+                value="[nzCondition]=&quot;$VAR0$&quot;$END$"
+                description="是否直接执行确定方法"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="&quot;false&quot;" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzPopconfirm.nzPlacement"
+                value="[nzPlacement]=&quot;&apos;$VAR0$&apos;&quot;$END$"
+                description="气泡框位置"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="enum(&quot;top&quot;, &quot;left&quot;, &quot;right&quot;, &quot;bottom&quot;, &quot;topLeft&quot;, &quot;topRight&quot;, &quot;bottomLeft&quot;, &quot;bottomRight&quot;, &quot;leftTop&quot;, &quot;leftBottom&quot;, &quot;rightTop&quot;, &quot;rightBottom&quot;)" defaultValue="&quot;top&quot;" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzPopconfirm.nzVisible"
+                value="[nzVisible]=&quot;$VAR0$&quot;$END$"
+                description="用于手动控制浮层显隐 双向绑定"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="&quot;false&quot;" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzPopconfirm@nzVisibleChange"
+                value="(nzVisibleChange)=&quot;$VAR0$&quot;$END$"
+                description="显示隐藏的回调"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzPopconfirm.nzTrigger"
+                value="[nzTrigger]=&quot;&apos;$VAR0$&apos;&quot;$END$"
+                description="触发行为，可选 hover/focus/click"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="enum(&quot;hover&quot;, &quot;focus&quot;, &quot;click&quot;)" defaultValue="&quot;click&quot;" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzPopconfirm.nzOverlayClassName"
+                value="[nzOverlayClassName]=&quot;&apos;$VAR0$&apos;&quot;$END$"
+                description="卡片类名"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzPopconfirm.nzOverlayStyle"
+                value="[nzOverlayStyle]=&quot;$VAR0$&quot;$END$"
+                description="卡片样式"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzPopconfirm.nzMouseEnterDelay"
+                value="[nzMouseEnterDelay]=&quot;$VAR0$&quot;$END$"
+                description="鼠标移入后延时多少才显示 Tooltip，单位：秒（nzTrigger=&apos;hover&apos;时有效）"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="&quot;0&quot;" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzPopconfirm.nzMouseLeaveDelay"
+                value="[nzMouseLeaveDelay]=&quot;$VAR0$&quot;$END$"
+                description="鼠标移出后延时多少才隐藏 Tooltip，单位：秒（nzTrigger=&apos;hover&apos;时有效）"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="&quot;0.1&quot;" alwaysStopAt="true" />
             <context>
                 <option name="HTML" value="true" />
                 <option name="MARKDOWN" value="true" />
@@ -2533,6 +3234,111 @@
                 toReformat="true"
                 toShortenFQNames="true">
             <variable name="VAR0" expression="" defaultValue="&quot;0.1&quot;" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzProgress"
+                value="&lt;nz-progress [ngModel]=&quot;$VAR0$&quot; [nzType]=&quot;&apos;$VAR1$&apos;&quot;&gt;&lt;/nz-progress&gt;$END$"
+                description="进度条 - 展示操作的当前进度。"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="" alwaysStopAt="true" />
+            <variable name="VAR1" expression="enum(&quot;line&quot;, &quot;circle&quot;)" defaultValue="&quot;line&quot;" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzProgress.nzType"
+                value="[nzType]=&quot;&apos;$VAR0$&apos;&quot;$END$"
+                description="类型，可选 linecircle"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="enum(&quot;line&quot;, &quot;circle&quot;)" defaultValue="&quot;line&quot;" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzProgress.nzFormat"
+                value="[nzFormat]=&quot;$VAR0$&quot;$END$"
+                description="内容的模板函数"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzProgress.nzStatus"
+                value="[nzStatus]=&quot;&apos;$VAR0$&apos;&quot;$END$"
+                description="状态，可选：success exception active"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="enum(&quot;success&quot;, &quot;exception&quot;, &quot;active&quot;)" defaultValue="&quot;&quot;" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzProgress.nzShowInfo"
+                value="[nzShowInfo]=&quot;$VAR0$&quot;$END$"
+                description="是否显示进度数值或状态图标"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="&quot;true&quot;" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzProgress.nzStrokeWidthLine"
+                value="[nzStrokeWidth]=&quot;$VAR0$&quot;$END$"
+                description="进度条线的宽度，单位 px"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="&quot;10&quot;" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzProgress.nzStrokeWidthCircle"
+                value="[nzStrokeWidth]=&quot;$VAR0$&quot;$END$"
+                description="圆形进度条线的宽度，单位是进度条画布宽度的百分比"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="&quot;6&quot;" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzProgress.nzWidth"
+                value="[nzWidth]=&quot;$VAR0$&quot;$END$"
+                description="圆形进度条画布宽度，单位 px"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="&quot;132&quot;" alwaysStopAt="true" />
             <context>
                 <option name="HTML" value="true" />
                 <option name="MARKDOWN" value="true" />
@@ -3071,6 +3877,60 @@
                 toReformat="true"
                 toShortenFQNames="true">
             <variable name="VAR0" expression="" defaultValue="" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzSpin"
+                value="&lt;nz-spin [nzSize]=&quot;&apos;$VAR0$&apos;&quot; [nzTip]=&quot;&apos;$VAR1$&apos;&quot; [nzSpinning]=&quot;$VAR2$&quot;&gt;&#10;  $END$&#10;&lt;/nz-spin&gt;"
+                description="加载中 - 用于页面和区块的加载中状态。"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="enum(&quot;small&quot;, &quot;large&quot;, &quot;default&quot;)" defaultValue="&quot;default&quot;" alwaysStopAt="true" />
+            <variable name="VAR1" expression="" defaultValue="&quot;content&quot;" alwaysStopAt="true" />
+            <variable name="VAR2" expression="" defaultValue="&quot;false&quot;" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzSpin.nzSize"
+                value="[nzSize]=&quot;&apos;$VAR0$&apos;&quot;$END$"
+                description="spin组件中点的大小，可选值为 small default large"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="enum(&quot;small&quot;, &quot;large&quot;, &quot;default&quot;)" defaultValue="&quot;default&quot;" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzSpin.nzSpinning"
+                value="[nzSpinning]=&quot;$VAR0$&quot;$END$"
+                description="用于内嵌其他组件的模式，可以关闭 loading 效果"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="&quot;false&quot;" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzSpin.nzTip"
+                value="[nzTip]=&quot;&apos;$VAR0$&apos;&quot;$END$"
+                description="自定义描述文案"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="&quot;content&quot;" alwaysStopAt="true" />
             <context>
                 <option name="HTML" value="true" />
                 <option name="MARKDOWN" value="true" />

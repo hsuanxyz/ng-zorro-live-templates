@@ -1,0 +1,54 @@
+# https://ng.ant.design/#/components/anchor
+
+nzAnchor:
+  description: 锚点 - 用于跳转到页面指定位置。
+  tpl: |-
+    <nz-anchor>
+        $END$
+    </nz-anchor>
+
+nzAnchorLink:
+  description: 锚点 - 用于跳转到页面指定位置。
+  tpl: |-
+    <nz-link [nzHref]="'#$VAR0$'" [nzTitle]="'$VAR1$'">
+        $END$
+    </nz-link>
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+    - {name: 'VAR1', defaultValue: ''}
+
+nzAnchor.nzOffsetTop:
+  description: "距离窗口顶部达到指定偏移量后触发"
+  tpl: |-
+    [nzOffsetTop]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzAnchor.nzBounds:
+  description: "锚点区域边界"
+  tpl: |-
+    [nzBounds]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzAnchor.nzScroll:
+  description: "滚动至某锚点时触发"
+  tpl: |-
+    [nzScroll]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzAnchorLink.nzHref:
+  description: "锚点链接"
+  tpl: |-
+    [nzHref]="'#$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzAnchorLink.nzTitle:
+  description: "文字内容"
+  tpl: |-
+    [nzTitle]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+

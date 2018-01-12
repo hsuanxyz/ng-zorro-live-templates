@@ -1,4 +1,4 @@
-# popover - https://ng.ant.design/#/components/tooltip
+# https://ng.ant.design/#/components/tooltip
 
 nzTooltip:
   description: 文字提示 - 简单的文字提示气泡框。

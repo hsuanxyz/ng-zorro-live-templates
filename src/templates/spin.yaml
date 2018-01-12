@@ -1,0 +1,33 @@
+# https://ng.ant.design/#/components/spin
+
+nzSpin:
+  description: 加载中 - 用于页面和区块的加载中状态。
+  tpl: |-
+    <nz-spin [nzSize]="'$VAR0$'" [nzTip]="'$VAR1$'" [nzSpinning]="$VAR2$">
+      $END$
+    </nz-spin>
+  variables:
+    - {name: 'VAR0', defaultValue: '"default"', expression: 'enum("small", "large", "default")'}
+    - {name: 'VAR1', defaultValue: '"content"'}
+    - {name: 'VAR2', defaultValue: '"false"'}
+
+nzSpin.nzSize:
+  description: "spin组件中点的大小，可选值为 small default large"
+  tpl: |-
+    [nzSize]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"default"', expression: 'enum("small", "large", "default")'}
+
+nzSpin.nzSpinning:
+  description: "用于内嵌其他组件的模式，可以关闭 loading 效果"
+  tpl: |-
+    [nzSpinning]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"false"'}
+
+nzSpin.nzTip:
+  description: "自定义描述文案"
+  tpl: |-
+    [nzTip]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"content"'}

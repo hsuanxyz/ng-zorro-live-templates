@@ -1,0 +1,128 @@
+# https://ng.ant.design/#/components/modal
+
+nzModal:
+  description: 对话框 - 模态对话框。
+  tpl: |-
+    <nz-modal
+        [(nzVisible)]="isVisible"
+        [nzConfirmLoading]="false|true"
+        [nzTitle]="'标题'"
+        [nzClosable]="false|true"
+        [nzBody]="'这是内容'"
+        [nzWidth]="520"
+        [nzContent]="modalContent"
+        [nzOkText]="'确定'"
+        [nzCancelText]="'取消'"
+        [nzMaskClosable]="false|true"
+        [nzZIndex]="1000"
+        [nzStyle]="{}"
+        [nzWrapClassName]="''"
+        (nzOnCancel)="handleCancel($event)"
+        (nzOnOk)="handleOk($event)">
+        <ng-template #modalContent>$END$</ng-template>
+    </nz-modal>
+
+nzModal.nzVisible:
+  description: "对话框是否可见"
+  tpl: |-
+    [nzVisible]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzModal.nzConfirmLoading:
+  description: "确定按钮 loading"
+  tpl: |-
+    [nzConfirmLoading]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"true"'}
+
+nzModal.nzTitle:
+  description: "标题"
+  tpl: |-
+    [nzTitle]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzModal.nzClosable:
+  description: "是否显示右上角的关闭按钮"
+  tpl: |-
+    [nzClosable]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"true"'}
+
+nzModal.nzBody:
+  description: "内容"
+  tpl: |-
+    [nzBody]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzModal@nzOnOk:
+  description: "点击确定回调"
+  tpl: |-
+    (nzOnOk)="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzModal@nzOnCancel:
+  description: "点击遮罩层或右上角叉或取消按钮的回调"
+  tpl: |-
+    (nzOnCancel)="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzModal.nzWidth:
+  description: "宽度"
+  tpl: |-
+    [nzWidth]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"520"'}
+
+nzModal.nzFooter:
+  description: "底部内容"
+  tpl: |-
+    [nzFooter]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzModal.nzOkText:
+  description: "确认按钮文字"
+  tpl: |-
+    [nzOkText]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"确认"'}
+
+nzModal.nzCancelText:
+  description: "取消按钮文字"
+  tpl: |-
+    [nzCancelText]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"取消"'}
+
+nzModal.nzMaskClosable:
+  description: "点击蒙层是否允许关闭"
+  tpl: |-
+    [nzMaskClosable]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"true"'}
+
+nzModal.nzZIndex:
+  description: "Modal zIndex属性，用于决定显示先后次序"
+  tpl: |-
+    [nzZIndex]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"1000"'}
+
+nzModal.nzStyle:
+  description: "可用于设置浮层的样式，调整浮层位置等"
+  tpl: |-
+    [nzStyle]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzModal.nzWrapClassName:
+  description: "对话框外层容器的类名"
+  tpl: |-
+    [nzWrapClassName]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
