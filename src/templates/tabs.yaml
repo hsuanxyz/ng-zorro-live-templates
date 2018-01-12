@@ -1,0 +1,138 @@
+# https://ng.ant.design/#/components/tabs
+
+nzTabset:
+  description: 标签页 - 选项卡切换组件。
+  tpl: |-
+    <nz-tabset [nzType]="'$VAR0$'" [nzSize]="'$VAR1$'" [nzTabPosition]="'$VAR2$'" (nzSelectChange)="$VAR3$">
+      <nz-tab>
+        <ng-template #nzTabHeading>
+          $VAR4$
+        </ng-template>
+        $VAR5$
+      </nz-tab>$END$
+      <ng-template #nzTabBarExtraContent>
+          <i class="ant-tabs-new-tab anticon anticon-plus" (click)="$VAR6$"></i>
+      </ng-template>
+    </nz-tabset>
+  variables:
+    - {name: 'VAR0', defaultValue: '"line"', expression: 'enum("line", "card")'}
+    - {name: 'VAR1', defaultValue: '"default"', expression: 'enum("default", "small")'}
+    - {name: 'VAR2', defaultValue: '"top"', expression: 'enum("top", "right", "bottom", "left")'}
+    - {name: 'VAR3', defaultValue: ''}
+    - {name: 'VAR4', defaultValue: '"title"'}
+    - {name: 'VAR5', defaultValue: '"content"'}
+    - {name: 'VAR6', defaultValue: ''}
+
+nzTab:
+  description: 标签页 - 单独 Tab。
+  tpl: |-
+    <nz-tab [nzDisabled]="$VAR0$" (nzClick)="$VAR1$">
+      <ng-template #nzTabHeading>
+        $VAR2$
+      </ng-template>
+      $VAR3$
+    </nz-tab>$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"false"'}
+    - {name: 'VAR1', defaultValue: '""'}
+    - {name: 'VAR2', defaultValue: '"title"'}
+    - {name: 'VAR3', defaultValue: '"content"'}
+
+nzTabset.nzSelectedIndex:
+  description: "当前激活的Tab Index，支持双向绑定"
+  tpl: |-
+    [nzSelectedIndex]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"0"'}
+
+nzTabset@nzSelectedIndexChange:
+  description: "当前激活的Tab Index回调"
+  tpl: |-
+    (nzSelectedIndexChange)="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzTabset@nzSelectChange:
+  description: "当前激活的Tab与Index值回调"
+  tpl: |-
+    (nzSelectChange)="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzTabset.nzShowPagination:
+  description: "超出高度或宽度后是否显示滑动按钮"
+  tpl: |-
+    [nzShowPagination]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"true"'}
+
+nzTabset.nzTabBarExtraTemplate:
+  description: "用于指定 tab bar 上特定的额外的元素"
+  tpl: |-
+    #nzTabBarExtraTemplate$END$
+
+nzTabset.nzTabBarExtraContent:
+  description: "tab bar 上额外的元素"
+  tpl: |-
+    #nzTabBarExtraContent$END$
+
+nzTabset.nzType:
+  description: "页签的基本样式，可选 line、card 类型"
+  tpl: |-
+    [nzType]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"line"', expression: 'enum("line", "card")'}
+
+nzTabset.nzSize:
+  description: "大小，提供 default 和 small 两种大小"
+  tpl: |-
+    [nzSize]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"default"', expression: 'enum("default", "small")'}
+
+nzTabset.nzAnimated:
+  description: "是否使用动画切换 Tabs，在 nzTabPosition=top|bottom 时有效"
+  tpl: |-
+    [nzAnimated]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"true"'}
+
+nzTabset.nzTabPosition:
+  description: "页签位置，可选值有 top right bottom left"
+  tpl: |-
+    [nzTabPosition]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"top"', expression: 'enum("top", "right", "bottom", "left")'}
+
+nzTab.nzTabHeading:
+  description: "选项卡头显示内容"
+  tpl: |-
+    #nzTabHeading$END$
+
+nzTab.nzDisabled:
+  description: "是否可被选中"
+  tpl: |-
+    [nzDisabled]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"false"'}
+
+nzTab@nzClick:
+  description: "点击选中事件回调"
+  tpl: |-
+    (nzClick)="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzTab@nzSelect:
+  description: "被选中后事件回调"
+  tpl: |-
+    (nzSelect)="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzTab@nzDeselect:
+  description: "不被选中事件回调"
+  tpl: |-
+    (nzDeselect)="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}

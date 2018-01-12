@@ -1,0 +1,87 @@
+# https://ng.ant.design/#/components/tag
+
+nzTag:
+  description: 标签 - 进行标记和分类的小标签。
+  tpl: <nz-tag>$END$</nz-tag>
+
+nzCheckableTag:
+  description: 标签 - 可选择。
+  tpl: |-
+    <nz-checkable-tag
+      [nzChecked]="$VAR0$"
+      (nzChange)="$VAR1$">
+      $END$
+    </nz-checkable-tag>
+  variables:
+    - {name: 'VAR0', defaultValue: '"false"'}
+    - {name: 'VAR1', defaultValue: ''}
+
+nzCheckableTag.nzChecked:
+  description: "设置标签的选中状态"
+  tpl: |-
+    [nzChecked]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"false"'}
+
+nzCheckableTag.nzClosable:
+  description: "标签是否可以关闭"
+  tpl: |-
+    [nzClosable]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"false"'}
+
+nzCheckableTag.nzColor:
+  description: "标签色"
+  tpl: |-
+    [nzColor]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"#000"'}
+
+nzCheckableTag@nzBeforeClose:
+  description: "关闭前的事件，参数为：(event: Event): void。可以通过设置 event.preventDefault(); 来阻止标签关闭。"
+  tpl: |-
+    (nzBeforeClose)="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzCheckableTag@nzClose:
+  description: "关闭后事件，参数为：(event: Event): void，此时关闭的动画已完成。"
+  tpl: |-
+    (nzClose)="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzCheckableTag@nzChange:
+  description: "点击标签时触发的事件，参数为：(checked: boolean): void。"
+  tpl: |-
+    (nzChange)="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzTag.nzClosable:
+  description: "标签是否可以关闭"
+  tpl: |-
+    [nzClosable]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"false"'}
+
+nzTag.nzColor:
+  description: "标签色"
+  tpl: |-
+    [nzColor]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"#000"'}
+
+nzTag@nzBeforeClose:
+  description: "关闭前事件，参数为：(event: Event)。可以通过设置 event.preventDefault(); 来阻止标签关闭。"
+  tpl: |-
+    (nzBeforeClose)="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzTag@nzClose:
+  description: "关闭后事件，参数为：(event: Event)，此时关闭的动画已完成。"
+  tpl: |-
+    (nzClose)="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}

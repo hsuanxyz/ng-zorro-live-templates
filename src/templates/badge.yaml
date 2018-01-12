@@ -1,0 +1,58 @@
+# badge - https://ng.ant.design/#/components/badge
+
+nzBadge:
+  description: 徽标数 - 图标右上角的圆形徽标数字
+  tpl: <nz-badge [nzCount]="$VAR0$">$END$</nz-badge>
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzBadge-dot:
+  description: 徽标数 - 只显示圆点
+  tpl: <nz-badge [nzDot]="true">$END$</nz-badge>
+
+nzBadge-status:
+  description: 徽标数 - 带文字状态点
+  tpl: <nz-badge [nzStatus]="'$VAR0$'" [nzText]="'$VAR1$'">$END$</nz-badge>
+  variables:
+    - {name: 'VAR0', defaultValue: '"default"', expression: 'enum("success", "processing", "default", "error", "warning")'}
+    - {name: 'VAR1', defaultValue: '""'}
+
+nzBadge.nzCount:
+  description: "展示的数字，大于 nzOverflowCount 时显示为 nzOverflowCount+为 0 时隐藏"
+  tpl: |-
+    [nzCount]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzBadge.nzOverflowCount:
+  description: "展示封顶的数字值"
+  tpl: |-
+    [nzOverflowCount]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzBadge.nzShowZero:
+  description: "当添加该属性时，当数值为 0 时，展示 Badge"
+  tpl: |-
+    nzShowZero
+
+nzBadge.nzDot:
+  description: "不展示数字，只有一个小红点"
+  tpl: |-
+    [nzDot]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"true"'}
+
+nzBadge.nzStatus:
+  description: "设置 Badge 为状态点"
+  tpl: |-
+    [nzStatus]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"default"', expression: 'enum("success", "processing", "default", "error", "warning")'}
+
+nzBadge.nzText:
+  description: "在设置了 nzStatus的前提下有效，设置状态点的文本"
+  tpl: |-
+    [nzText]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}

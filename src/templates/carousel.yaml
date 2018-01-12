@@ -1,0 +1,74 @@
+# https://ng.ant.design/#/components/carousel
+
+nzCarousel:
+  description: 走马灯 - 旋转木马，一组轮播的区域。
+  tpl: |-
+    <nz-carousel [nzVertical]="$VAR0$" [nzEffect]="'$VAR1$'" [nzAutoPlay]="$VAR2$">
+      <div nz-carousel-content> item0 </div>
+      $END$
+    </nz-carousel>
+  variables:
+    - {name: 'VAR0', defaultValue: '"false"'}
+    - {name: 'VAR1', defaultValue: '"scrollx"', expression: 'enum("scrollx", "fade")'}
+    - {name: 'VAR2', defaultValue: '"false"'}
+
+nzCarousel.nz-carousel-content:
+  description: "用于标识滚动的slide内容"
+  tpl: |-
+    nz-carousel-content$END$
+
+nzCarousel.nzEffect:
+  description: "动画效果函数，可取 scrollx, fade"
+  tpl: |-
+    [nzEffect]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"scrollx"', expression: 'enum("scrollx", "fade")'}
+
+nzCarousel.nzDots:
+  description: "是否显示面板指示点"
+  tpl: |-
+    [nzDots]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"true"'}
+
+nzCarousel.nzVertical:
+  description: "垂直显示"
+  tpl: |-
+    [nzVertical]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"false"'}
+
+nzCarousel.nzAutoPlay:
+  description: "是否自动切换"
+  tpl: |-
+    [nzAutoPlay]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"false"'}
+
+nzCarousel.nzAutoPlaySpeed:
+  description: "自动切换速度, 单位毫秒"
+  tpl: |-
+    [nzAutoPlaySpeed]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"3000"'}
+
+nzCarousel.nzPauseOnHover:
+  description: "鼠标悬停暂停"
+  tpl: |-
+    [nzPauseOnHover]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"true"'}
+
+nzCarousel@nzAfterChange:
+  description: "切换面板后的回调, 参数为当前索引"
+  tpl: |-
+    (nzAfterChange)="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzCarousel@nzBeforeChange:
+  description: "切换面板前的回调, 参数为当前的索引与被切换到的索引"
+  tpl: |-
+    (nzBeforeChange)="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}

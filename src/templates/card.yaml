@@ -1,0 +1,40 @@
+# https://ng.ant.design/#/components/card
+
+nzCard:
+  description: 卡片 - 通用卡片容器。
+  tpl: |-
+    <nz-card>
+      <ng-template #title>
+        $VAR0$
+      </ng-template>
+      <ng-template #extra>
+        $VAR1$
+      </ng-template>
+      <ng-template #body>
+        $END$
+      </ng-template>
+    </nz-card>
+  variables:
+    - {name: 'VAR0', defaultValue: '"Title"'}
+    - {name: 'VAR1', defaultValue: '"More"'}
+
+nzCard.nzBordered:
+  description: "是否有边框"
+  tpl: |-
+    [nzBordered]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzCard.nzNoHovering:
+  description: "取消鼠标移过浮起"
+  tpl: |-
+    [nzNoHovering]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzCard.nzLoading:
+  description: "是否显示加载状态"
+  tpl: |-
+    [nzLoading]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}

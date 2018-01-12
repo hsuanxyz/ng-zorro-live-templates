@@ -1,0 +1,35 @@
+# https://ng.ant.design/#/components/timeline
+
+nzTimeline:
+  description: 时间轴 - 展示的时间流信息。
+  tpl: |-
+    <nz-timeline>
+      <nz-timeline-item> item0 </nz-timeline-item>
+      <nz-timeline-item> item1 </nz-timeline-item>
+      <nz-timeline-item> item2 </nz-timeline-item>
+      $END$
+    </nz-timeline>
+
+nzTimelineItem:
+  description: 时间轴子项
+  tpl: |-
+    <nz-timeline-item nzColor="'$VAR0$'">$END$</nz-timeline-item>
+  variables:
+    - {name: 'VAR0', defaultValue: '"blue"', expression: 'enum("green", "red", "blue")'}
+
+nzTimelineItem.nzColor:
+  description: "圈的颜色，固定为&quot;green&quot;，&quot;red&quot;，&quot;blue&quot;"
+  tpl: |-
+    [nzColor]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"blue"', expression: 'enum("green", "red", "blue")'}
+
+nzTimelineItem.pending:
+  description: "幽灵节点元素"
+  tpl: |-
+    #pending$END$
+
+nzTimelineItem.custom:
+  description: "自定义元素"
+  tpl: |-
+    #custom$END$

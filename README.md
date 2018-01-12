@@ -56,6 +56,21 @@ ng-zorro Live Templates for WebStorm
 | `nzAffix@nzChange` | "固定状态改变时触发的回调函数" |
 | `nzAffix.nzOffsetTop` | "距离窗口顶部达到指定偏移量后触发" |
 | `nzAffix.nzTarget` | "设置需要监听其滚动事件的元素，值为一个返回对应 DOM 元素的函数" |
+| `nzAvatar` | "头像 - 用来代表用户或事物，支持图片、图标或字符展示。" |
+| `nzAvatar.nzShape` | "指定头像的形状" |
+| `nzAvatar.nzSize` | "设置头像的大小" |
+| `nzAvatar.nzText` | "文本类头像" |
+| `nzAvatar.nzSrc` | "图片类头像的资源地址；倘若图片加载失败，自动显示 nzIcon &gt; nzText。" |
+| `nzAvatar.nzIcon` | "设置头像的图标类型，参考 icon 组件" |
+| `nzBadge` | "徽标数 - 图标右上角的圆形徽标数字" |
+| `nzBadge-dot` | "徽标数 - 只显示圆点" |
+| `nzBadge-status` | "徽标数 - 带文字状态点" |
+| `nzBadge.nzCount` | "展示的数字，大于 nzOverflowCount 时显示为 nzOverflowCount+为 0 时隐藏" |
+| `nzBadge.nzOverflowCount` | "展示封顶的数字值" |
+| `nzBadge.nzShowZero` | "当添加该属性时，当数值为 0 时，展示 Badge" |
+| `nzBadge.nzDot` | "不展示数字，只有一个小红点" |
+| `nzBadge.nzStatus` | "设置 Badge 为状态点" |
+| `nzBadge.nzText` | "在设置了 nzStatus的前提下有效，设置状态点的文本" |
 | `nzBreadcrumb` | "面包屑" |
 | `nzBreadcrumb+` | "面包屑" |
 | `nzBreadcrumbItem` | "面包屑 item" |
@@ -69,6 +84,20 @@ ng-zorro Live Templates for WebStorm
 | `nzButton.nzLoading` | "设置按钮载入状态" |
 | `nzButton.nzShape` | "设置按钮形状，可选值为 circle 或者不设" |
 | `nzButton.nzSize` | "设置按钮大小，可选值为 small large 或者不设" |
+| `nzCard` | "卡片 - 通用卡片容器。" |
+| `nzCard.nzBordered` | "是否有边框" |
+| `nzCard.nzNoHovering` | "取消鼠标移过浮起" |
+| `nzCard.nzLoading` | "是否显示加载状态" |
+| `nzCarousel` | "走马灯 - 旋转木马，一组轮播的区域。" |
+| `nzCarousel.nz-carousel-content` | "用于标识滚动的slide内容" |
+| `nzCarousel.nzEffect` | "动画效果函数，可取 scrollx, fade" |
+| `nzCarousel.nzDots` | "是否显示面板指示点" |
+| `nzCarousel.nzVertical` | "垂直显示" |
+| `nzCarousel.nzAutoPlay` | "是否自动切换" |
+| `nzCarousel.nzAutoPlaySpeed` | "自动切换速度, 单位毫秒" |
+| `nzCarousel.nzPauseOnHover` | "鼠标悬停暂停" |
+| `nzCarousel@nzAfterChange` | "切换面板后的回调, 参数为当前索引" |
+| `nzCarousel@nzBeforeChange` | "切换面板前的回调, 参数为当前的索引与被切换到的索引" |
 | `nzCascader` | "级联选择" |
 | `nzCascader.nzSize` | "输入框大小，large 高度为 32px，small 为 22px，默认是 28px" |
 | `nzCascader.nzDisabled` | "禁用" |
@@ -99,6 +128,14 @@ ng-zorro Live Templates for WebStorm
 | `nzCheckboxGroup` | "多选框组" |
 | `nzCheckbox.nzIndeterminate` | "设置 indeterminate 状态，只负责样式控制" |
 | `nzCheckbox.nzDisabled` | "是否可选" |
+| `nzCollapseSet` | "折叠面板 - 容器区域。" |
+| `nzCollapse` | "折叠面板 - 内容区域。" |
+| `nzCollapseSet.nzBordered` | "是否有边框" |
+| `nzCollapseSet.nzAccordion` | "是否是手风琴类型" |
+| `nzCollapse.nzTitle` | "面板头内容" |
+| `nzCollapse.nzActive` | "当前tab是否被选中" |
+| `nzCollapse.nzDisabled` | "当前tab是否禁止选中" |
+| `nzCollapse.collapse-title` | "与nzTitle二选一，定义面板头内容" |
 | `nzDatepicker` | "日期选择框" |
 | `nzRangePicker` | "日期范围选择框" |
 | `nzDatepicker.nzSize` | "输入框大小，large 高度为 32px，small 为 22px，默认是 28px" |
@@ -201,6 +238,16 @@ ng-zorro Live Templates for WebStorm
 | `nzPagination.nzSize` | "当为「small」时，是小尺寸分页" |
 | `nzPagination.nzSimple` | "当添加该属性时，显示为简单分页" |
 | `nzPagination.nzShowTotal` | "当添加该属性时，显示总共有多少条数据" |
+| `nzPopover` | "气泡卡片 - 点击/鼠标移入元素，弹出气泡式的卡片浮层。" |
+| `nzPopover.nzPlacement` | "气泡框位置，可选" |
+| `nzPopover.nzTemplate` | "用于定义Content内容" |
+| `nzPopover.nzVisible` | "用于手动控制浮层显隐 双向绑定" |
+| `nzPopover@nzVisibleChange` | "显示隐藏的回调" |
+| `nzPopover.nzTrigger` | "触发行为，可选 hover/focus/click" |
+| `nzPopover.nzOverlayClassName` | "卡片类名" |
+| `nzPopover.nzOverlayStyle` | "卡片样式" |
+| `nzPopover.nzMouseEnterDelay` | "鼠标移入后延时多少才显示 Tooltip，单位：秒（nzTrigger=&apos;hover&apos;时有效）" |
+| `nzPopover.nzMouseLeaveDelay` | "鼠标移出后延时多少才隐藏 Tooltip，单位：秒（nzTrigger=&apos;hover&apos;时有效）" |
 | `nzRadio` | "单选框" |
 | `nzRadioGroup` | "单选框组" |
 | `nzRadioButtonGroup` | "按钮单选框组" |
@@ -259,6 +306,35 @@ ng-zorro Live Templates for WebStorm
 | `nzSwitch.nzDisabled` | "开关是否禁用" |
 | `nzSwitch.checked` | "选中时的内容" |
 | `nzSwitch.unchecked` | "非选中时的内容" |
+| `nzTabset` | "标签页 - 选项卡切换组件。" |
+| `nzTab` | "标签页 - 单独 Tab。" |
+| `nzTabset.nzSelectedIndex` | "当前激活的Tab Index，支持双向绑定" |
+| `nzTabset@nzSelectedIndexChange` | "当前激活的Tab Index回调" |
+| `nzTabset@nzSelectChange` | "当前激活的Tab与Index值回调" |
+| `nzTabset.nzShowPagination` | "超出高度或宽度后是否显示滑动按钮" |
+| `nzTabset.nzTabBarExtraTemplate` | "用于指定 tab bar 上特定的额外的元素" |
+| `nzTabset.nzTabBarExtraContent` | "tab bar 上额外的元素" |
+| `nzTabset.nzType` | "页签的基本样式，可选 line、card 类型" |
+| `nzTabset.nzSize` | "大小，提供 default 和 small 两种大小" |
+| `nzTabset.nzAnimated` | "是否使用动画切换 Tabs，在 nzTabPosition=top|bottom 时有效" |
+| `nzTabset.nzTabPosition` | "页签位置，可选值有 top right bottom left" |
+| `nzTab.nzTabHeading` | "选项卡头显示内容" |
+| `nzTab.nzDisabled` | "是否可被选中" |
+| `nzTab@nzClick` | "点击选中事件回调" |
+| `nzTab@nzSelect` | "被选中后事件回调" |
+| `nzTab@nzDeselect` | "不被选中事件回调" |
+| `nzTag` | "标签 - 进行标记和分类的小标签。" |
+| `nzCheckableTag` | "标签 - 可选择。" |
+| `nzCheckableTag.nzChecked` | "设置标签的选中状态" |
+| `nzCheckableTag.nzClosable` | "标签是否可以关闭" |
+| `nzCheckableTag.nzColor` | "标签色" |
+| `nzCheckableTag@nzBeforeClose` | "关闭前的事件，参数为：(event: Event): void。可以通过设置 event.preventDefault(); 来阻止标签关闭。" |
+| `nzCheckableTag@nzClose` | "关闭后事件，参数为：(event: Event): void，此时关闭的动画已完成。" |
+| `nzCheckableTag@nzChange` | "点击标签时触发的事件，参数为：(checked: boolean): void。" |
+| `nzTag.nzClosable` | "标签是否可以关闭" |
+| `nzTag.nzColor` | "标签色" |
+| `nzTag@nzBeforeClose` | "关闭前事件，参数为：(event: Event)。可以通过设置 event.preventDefault(); 来阻止标签关闭。" |
+| `nzTag@nzClose` | "关闭后事件，参数为：(event: Event)，此时关闭的动画已完成。" |
 | `nzTimePicker` | "时间选择框" |
 | `nzTimePicker.nzSize` | "设置TimePicker大小" |
 | `nzTimePicker.nzPlaceHolder` | "没有值的时候显示的内容" |
@@ -268,6 +344,22 @@ ng-zorro Live Templates for WebStorm
 | `nzTimePicker.nzDisabledMinutes` | "禁止选择部分分钟选项" |
 | `nzTimePicker.nzDisabledSeconds` | "禁止选择部分秒选项" |
 | `nzTimePicker.nzHideDisabledOptions` | "添加该属性来隐藏禁止选择的选项" |
+| `nzTimeline` | "时间轴 - 展示的时间流信息。" |
+| `nzTimelineItem` | "时间轴子项" |
+| `nzTimelineItem.nzColor` | "圈的颜色，固定为&quot;green&quot;，&quot;red&quot;，&quot;blue&quot;" |
+| `nzTimelineItem.pending` | "幽灵节点元素" |
+| `nzTimelineItem.custom` | "自定义元素" |
+| `nzTooltip` | "文字提示 - 简单的文字提示气泡框。" |
+| `nzTooltip.nzPlacement` | "气泡框位置，可选" |
+| `nzTooltip.nzTitle` | "提示文字" |
+| `nzTooltip.nzTemplate` | "用于定义Content内容" |
+| `nzTooltip.nzVisible` | "用于手动控制浮层显隐 双向绑定" |
+| `nzTooltip@nzVisibleChange` | "显示隐藏的回调" |
+| `nzTooltip.nzTrigger` | "触发行为，可选 hover/focus/click" |
+| `nzTooltip.nzOverlayClassName` | "卡片类名" |
+| `nzTooltip.nzOverlayStyle` | "卡片样式" |
+| `nzTooltip.nzMouseEnterDelay` | "鼠标移入后延时多少才显示 Tooltip，单位：秒（nzTrigger=&apos;hover&apos;时有效）" |
+| `nzTooltip.nzMouseLeaveDelay` | "鼠标移出后延时多少才隐藏 Tooltip，单位：秒（nzTrigger=&apos;hover&apos;时有效）" |
 | `nzTransfer` | "时间选择框" |
 | `nzTransfer.render` | "每行数据渲染模板" |
 | `nzTransfer.footer` | "底部渲染模板" |

@@ -1,0 +1,65 @@
+# https://ng.ant.design/#/components/collapse
+
+nzCollapseSet:
+  description: 折叠面板 - 容器区域。
+  tpl: |-
+    <nz-collapseset [nzBordered]="$VAR0$" [nzAccordion]="'$VAR1$'">
+      <div nz-carousel-content> item0 </div>
+      $END$
+    </nz-collapseset>
+  variables:
+    - {name: 'VAR0', defaultValue: '"true"'}
+    - {name: 'VAR1', defaultValue: '"false"'}
+
+nzCollapse:
+  description: 折叠面板 - 内容区域。
+  tpl: |-
+    <nz-collapse [nzTitle]="'$VAR0$'" [nzActive]="$VAR1$" [nzDisabled]="$VAR2$">
+        $VAR3$
+    </nz-collapse>
+    $END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"title"'}
+    - {name: 'VAR1', defaultValue: '"false"'}
+    - {name: 'VAR2', defaultValue: '"false"'}
+    - {name: 'VAR3', defaultValue: '""'}
+
+nzCollapseSet.nzBordered:
+  description: "是否有边框"
+  tpl: |-
+    [nzBordered]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"true"'}
+
+nzCollapseSet.nzAccordion:
+  description: "是否是手风琴类型"
+  tpl: |-
+    [nzAccordion]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"false"'}
+
+nzCollapse.nzTitle:
+  description: "面板头内容"
+  tpl: |-
+    [nzTitle]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzCollapse.nzActive:
+  description: "当前tab是否被选中"
+  tpl: |-
+    [nzActive]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"false"'}
+
+nzCollapse.nzDisabled:
+  description: "当前tab是否禁止选中"
+  tpl: |-
+    [nzDisabled]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"false"'}
+
+nzCollapse.collapse-title:
+  description: "与nzTitle二选一，定义面板头内容"
+  tpl: |-
+    collapse-title$END$

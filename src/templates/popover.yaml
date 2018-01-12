@@ -1,0 +1,75 @@
+# popover - https://ng.ant.design/#/components/popover
+
+nzPopover:
+  description: 气泡卡片 - 点击/鼠标移入元素，弹出气泡式的卡片浮层。
+  tpl: |-
+    <nz-popover [nzTitle]="'$VAR0$'">
+      <button nz-button nz-popover>弹出卡片</button>
+      <ng-template #nzTemplate>
+        $VAR1$
+      </ng-template>
+    </nz-popover>
+  variables:
+    - {name: 'VAR0', defaultValue: '"title"'}
+    - {name: 'VAR1', defaultValue: '"content"'}
+
+nzPopover.nzPlacement:
+  description: "气泡框位置，可选"
+  tpl: |-
+    [nzPlacement]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"top"', expression: 'enum("top", "left", "right", "bottom", "topLeft", "topRight", "bottomLeft", "bottomRight", "leftTop", "leftBottom", "rightTop", "rightBottom")'}
+
+nzPopover.nzTemplate:
+  description: "用于定义Content内容"
+  tpl: |-
+    #nzTemplate
+
+nzPopover.nzVisible:
+  description: "用于手动控制浮层显隐 双向绑定"
+  tpl: |-
+    [nzVisible]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"false"'}
+
+nzPopover@nzVisibleChange:
+  description: "显示隐藏的回调"
+  tpl: |-
+    (nzVisibleChange)="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzPopover.nzTrigger:
+  description: "触发行为，可选 hover/focus/click"
+  tpl: |-
+    [nzTrigger]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"hover"', expression: 'enum("hover", "focus", "click")'}
+
+nzPopover.nzOverlayClassName:
+  description: "卡片类名"
+  tpl: |-
+    [nzOverlayClassName]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzPopover.nzOverlayStyle:
+  description: "卡片样式"
+  tpl: |-
+    [nzOverlayStyle]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzPopover.nzMouseEnterDelay:
+  description: "鼠标移入后延时多少才显示 Tooltip，单位：秒（nzTrigger=&apos;hover&apos;时有效）"
+  tpl: |-
+    [nzMouseEnterDelay]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"0"'}
+
+nzPopover.nzMouseLeaveDelay:
+  description: "鼠标移出后延时多少才隐藏 Tooltip，单位：秒（nzTrigger=&apos;hover&apos;时有效）"
+  tpl: |-
+    [nzMouseLeaveDelay]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"0.1"'}

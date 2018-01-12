@@ -1,0 +1,79 @@
+# popover - https://ng.ant.design/#/components/tooltip
+
+nzTooltip:
+  description: 文字提示 - 简单的文字提示气泡框。
+  tpl: |-
+    <nz-tooltip [nzTitle]="'$VAR0$'">
+      <span nz-tooltip>$VAR1$</span>
+    </nz-tooltip>
+  variables:
+    - {name: 'VAR0', defaultValue: '"title"'}
+    - {name: 'VAR1', defaultValue: '"content"'}
+
+nzTooltip.nzPlacement:
+  description: "气泡框位置，可选"
+  tpl: |-
+    [nzPlacement]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"top"', expression: 'enum("top", "left", "right", "bottom", "topLeft", "topRight", "bottomLeft", "bottomRight", "leftTop", "leftBottom", "rightTop", "rightBottom")'}
+
+nzTooltip.nzTitle:
+  description: 提示文字
+  tpl: |-
+    [nzTitle]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '""'}
+
+nzTooltip.nzTemplate:
+  description: "用于定义Content内容"
+  tpl: |-
+    #nzTemplate
+
+nzTooltip.nzVisible:
+  description: "用于手动控制浮层显隐 双向绑定"
+  tpl: |-
+    [nzVisible]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"false"'}
+
+nzTooltip@nzVisibleChange:
+  description: "显示隐藏的回调"
+  tpl: |-
+    (nzVisibleChange)="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzTooltip.nzTrigger:
+  description: "触发行为，可选 hover/focus/click"
+  tpl: |-
+    [nzTrigger]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"hover"', expression: 'enum("hover", "focus", "click")'}
+
+nzTooltip.nzOverlayClassName:
+  description: "卡片类名"
+  tpl: |-
+    [nzOverlayClassName]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzTooltip.nzOverlayStyle:
+  description: "卡片样式"
+  tpl: |-
+    [nzOverlayStyle]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzTooltip.nzMouseEnterDelay:
+  description: "鼠标移入后延时多少才显示 Tooltip，单位：秒（nzTrigger=&apos;hover&apos;时有效）"
+  tpl: |-
+    [nzMouseEnterDelay]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"0"'}
+
+nzTooltip.nzMouseLeaveDelay:
+  description: "鼠标移出后延时多少才隐藏 Tooltip，单位：秒（nzTrigger=&apos;hover&apos;时有效）"
+  tpl: |-
+    [nzMouseLeaveDelay]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"0.1"'}

@@ -1,4 +1,4 @@
-# affix - https://ng.ant.design/#/components/time-picker
+# https://ng.ant.design/#/components/time-picker
 
 nzTimePicker:
   description: 时间选择框
