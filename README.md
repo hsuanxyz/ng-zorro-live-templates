@@ -3,10 +3,23 @@ ng-zorro Live Templates for WebStorm
 
 ![GIT](https://github.com/HsuanXyz/ng-zorro-live-templates/blob/master/GIF.gif?raw=true)
 
-模板还在添加中，欢迎提交 [issues](https://github.com/HsuanXyz/ng-zorro-live-templates/issues/new) 和 PR [贡献指南](https://github.com/HsuanXyz/ng-zorro-live-templates/blob/master/CONTRIBUTING.md)
+所有文档中的组件和属性均已覆盖，包括 `icon` 及具有 `type` `size` `placement` 等属性可选项的下拉提示。
+
+可以当做离线文档使用
+
+欢迎提交 [issues](https://github.com/HsuanXyz/ng-zorro-live-templates/issues/new) 和 PR [贡献指南](https://github.com/HsuanXyz/ng-zorro-live-templates/blob/master/CONTRIBUTING.md)
 
 
 ## 安装
+
+### 方法一
+
+- 打开 IDE 设置
+- 前往 Plugins -> Browse repositories
+- 输入 ng-zorro 安装 ng-zorro
+- 重启 IDE
+
+### 方法二
 
 下载[这个文件](https://raw.githubusercontent.com/HsuanXyz/ng-zorro-live-templates/master/ng-zorro/ng-zorro.xml)保存到你的 templates 文件夹中，然后重启 IDE
 
@@ -16,14 +29,21 @@ ng-zorro Live Templates for WebStorm
 
 ## 使用
 
-关键字规律 `nz` + `组件名` + `属性`
-
 输入 `nz` 按下 `Cmd + J`  编辑器会打开提示列表，并且跟随输入过滤列表。
 
 当光标处于标签属性内，无需按下 `Cmd + J` ，输入 `nz` 编辑器会自动打开提示列表。
 
-- 关键字带 `.` 表示输入属性
-- 关键字带 `@` 表示输出属性
+- `nz组件名` 表示组件 HTML:
+
+    `nzButton` => `<button nz-button (click)="[|]">[|]</button>`
+
+- 关键字带 `.` 表示输入属性:
+
+    `nzButton.nzSize` => `[nzSize]="'small'[>small, large, default]"`
+
+- 关键字带 `@` 表示输出属性:
+
+    `nzAlert@nzOnClose` => `(nzChange)="[|]($event)"`
 
 提示： 可以使用 Emmet 语法快速生成标签
 
@@ -31,8 +51,8 @@ ng-zorro Live Templates for WebStorm
 
 ```html
 <nz-button-group>
-    <button nz-button (click)=""></button>
-    <button nz-button (click)=""></button>
+    <button nz-button (click)="[|]">[|]</button>
+    <button nz-button (click)="[|]">[|]</button>
 </nz-button-group>
 ```
 
@@ -40,9 +60,9 @@ ng-zorro Live Templates for WebStorm
 
 ```html
 <ul nz-menu>
-    <li nz-menu-item><i class="anticon anticon-step-backward"></i><span>item1</span></li>
-    <li nz-menu-item><i class="anticon anticon-step-backward"></i><span>item2</span></li>
-    <li nz-menu-item><i class="anticon anticon-step-backward"></i><span>item3</span></li>
+    <li nz-menu-item><i class="anticon anticon-step-[|]"></i><span>item1</span></li>
+    <li nz-menu-item><i class="anticon anticon-step-[|]"></i><span>item2</span></li>
+    <li nz-menu-item><i class="anticon anticon-step-[|]"></i><span>item3</span></li>
 </ul>
 ```
 
