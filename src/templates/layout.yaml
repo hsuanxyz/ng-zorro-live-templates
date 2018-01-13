@@ -1,0 +1,76 @@
+# https://ng.ant.design/#/components/layout
+
+nzLayout:
+  destription: 布局 - 协助进行页面级整体布局。
+  tpl: |-
+   <nz-layout>
+      <nz-header>
+          $END$
+      </nz-header>
+      <nz-content>
+
+      </nz-content>
+      <nz-footer>
+
+      </nz-footer>
+   </nz-layout>
+
+nzLayoutSider:
+  destription: 布局 - 侧边栏。
+  tpl: |-
+   <nz-sider [nzCollapsible]="$VAR0$"
+             [nzWidth]="$VAR1$"
+             [nzCollapsedWidth]="$VAR2$">
+       $END$
+   </nz-sider>
+  variables:
+    - {name: 'VAR0', defaultValue: '"true"'}
+    - {name: 'VAR1', defaultValue: '"200"'}
+    - {name: 'VAR2', defaultValue: '"64"'}
+
+nzLayoutSider.nzCollapsible:
+  description: "是否可收起，当添加该属性时变为可收起"
+  tpl: |-
+    nzCollapsible$END$
+
+nzLayoutSider.nzCollapsed:
+  description: "当前收起状态，可双向绑定"
+  tpl: |-
+    [nzCollapsed]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzLayoutSider@nzCollapseChange:
+  description: "展开-收起时的回调函数"
+  tpl: |-
+    (nzCollapseChange)="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzLayoutSider.nzTrigger:
+  description: "自定义 trigger，设置为 null 时隐藏 trigger"
+  tpl: |-
+    [nzTrigger]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzLayoutSider.nzWidth:
+  description: "宽度"
+  tpl: |-
+    [nzWidth]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"200"'}
+
+nzLayoutSider.nzCollapsedWidth:
+  description: "收缩宽度，设置为 0 会出现特殊 trigger"
+  tpl: |-
+    [nzCollapsedWidth]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"64"'}
+
+nzLayoutSider.nzBreakpoint:
+  description: "触发响应式布局的断点"
+  tpl: |-
+    [nzBreakpoint]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '""', expression: 'enum("xs", "sm", "md", "lg", "xl")'}
