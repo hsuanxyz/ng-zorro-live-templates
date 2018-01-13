@@ -1,0 +1,332 @@
+# https://ng.ant.design/#/components/table
+
+nzTable:
+  description: 表格 - 展示行列数据。
+  tpl: |-
+    <nz-table #nzTable [nzDataSource]="$VAR0$" [nzPageSize]="$VAR1$">
+        <thead nz-thead>
+            <tr>
+                <th nz-th><span>title</span></th>
+            </tr>
+        </thead>
+        <tbody nz-tbody>
+            <tr nz-tbody-tr *ngFor="let i of nzTable.data">
+                <td nz-td>{{i.title}}</td>
+            </tr>
+            $END$
+        </tbody>
+    </nz-table>
+  variables:
+     - {name: 'VAR0', defaultValue: ''}
+     - {name: 'VAR1', defaultValue: ''}
+
+nzTableSort:
+  description: 表格 - 嵌入th中显示排序状态。
+  tpl: |-
+    <nz-table-sort [(nzValue)]="$VAR0$" (nzValueChange)="$VAR1$"></nz-table-sort>
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+    - {name: 'VAR1', defaultValue: ''}
+
+
+nzTableFilter:
+  description: 表格 - 与nz-dropdown结合使用，用于过滤表中的数据
+  tpl: |-
+    <div $cpm$>
+      <span $cpm1$ (click)="$VAR0$">OK</span>
+      <span $cpm2$ (click)="$VAR1$">Reset</span>
+    </div>
+  variables:
+    - {name: 'cpm', alwaysStopAt: false, defaultValue: '"nz-table-filter"'}
+    - {name: 'cpm1', alwaysStopAt: false, defaultValue: '"nz-table-filter-confirm "'}
+    - {name: 'cpm2', alwaysStopAt: false, defaultValue: '"nz-table-filter-clear"'}
+    - {name: 'VAR0', defaultValue: ''}
+    - {name: 'VAR1', defaultValue: ''}
+
+nzTableThead:
+  description: 表格 - 标定thead。
+  tpl: |-
+    <thead $cpm$>
+      $END$
+    </thead>
+  variables:
+    - {name: 'cpm', alwaysStopAt: false, defaultValue: '"nz-thead"'}
+
+nzTableTh:
+  description: 表格 - th。
+  tpl: |-
+      <th $cpm$>$END$</th>
+  variables:
+    - {name: 'cpm', alwaysStopAt: false, defaultValue: '"nz-th"'}
+
+nzTableBody:
+  description: 表格 - tbody。
+  tpl: |-
+    <tbody $cpm$>
+        $END$
+    </tbody>
+  variables:
+    - {name: 'cpm', alwaysStopAt: false, defaultValue: '"nz-table-body"'}
+
+nzTableBodyTr:
+  description: 表格 - 标定tbody中tr。
+  tpl: |-
+    <tr $cpm$>
+      $END$
+    </tr>
+  variables:
+    - {name: 'cpm', alwaysStopAt: false, defaultValue: '"nz-tbody-tr"'}
+
+nzTableTd:
+  description: 表格 - 标定td。
+  tpl: |-
+    <td $cpm$>$END$</td>
+  variables:
+    - {name: 'cpm', alwaysStopAt: false, defaultValue: '"nz-td"'}
+
+nzTableDivider:
+  description: 表格 - 用于td中分隔数据
+  tpl: |-
+    <span $cpm$></span>$END$
+  variables:
+    - {name: 'cpm', alwaysStopAt: false, defaultValue: '"nz-table-divider"'}
+
+nzTableRowIndent:
+  description: 表格 - 与树形数据展示配合使用
+  tpl: |-
+    <nz-row-indent [nzIndentSize]="$VAR0$"></nz-row-indent>
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzTableRowExpandIcon:
+  description: 表格 - 与可展开和树形数据展示配合使用
+  tpl: |-
+    <nz-row-expand-icon [(nzExpand)]="$VAR0$" [nzShowExpand]="$VAR1$"></nz-row-expand-icon>
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+    - {name: 'VAR1', defaultValue: ''}
+
+nzTableRowExpandIcon.nzExpand:
+  description: 标识是否展开，可双向绑定
+  tpl: |-
+    [(nzExpand)]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzTableRowExpandIcon.nzShowExpand:
+  description: 是否显示此 展开/收缩 按钮
+  tpl: |-
+    [nzShowExpand]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzTableRowIndent.nzIndentSize:
+  description: 控制每一层的缩进宽度
+  tpl: |-
+    [nzIndentSize]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzTableTd.nzCheckbox:
+  description: 是否有checkbox出现在当前td上
+  tpl: |-
+    [nzCheckbox]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzTableTd.nzExpand:
+  description: 是否是展开按钮列
+  tpl: |-
+    [nzExpand]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzTableTh.nzCheckbox:
+  description: 是否有checkbox出现在当前th上
+  tpl: |-
+    [nzCheckbox]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzTableTh.nzExpand:
+  description: 是否是展开按钮列
+  tpl: |-
+    [nzExpand]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzTableTh.nzWidth:
+  description: 	当前列的宽度，暂时不支持合并列宽度
+  tpl: |-
+    [nzWidth]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzTable.nzAjaxData:
+  description: "远程异步数据，与nzDataSource二选一"
+  tpl: |-
+    [nzAjaxData]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzTable.nzDataSource:
+  description: "同步数据，与nzAjaxData二选一"
+  tpl: |-
+    [nzDataSource]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzTable@nzDataChange:
+  description: "当前分页数据回调，返回当前分页数据的内容"
+  tpl: |-
+    (nzDataChange)="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzTable.nzScroll:
+  description: "纵向支持滚动，也可用于指定滚动区域的高度：{ y: 300 }"
+  tpl: |-
+    [nzScroll]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzTable.nzFixedHeader:
+  description: "用于定位固定表头，与 nzScroll配合使用"
+  tpl: |-
+    #nzFixedHeader$END$
+
+nzTable.nzTotal:
+  description: "数据总量，用于与nzAjaxData共同使用"
+  tpl: |-
+    [nzTotal]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzTable.nzPageIndex:
+  description: "当前页码，可双向绑定"
+  tpl: |-
+    [(nzPageIndex)]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzTable@nzPageIndexChange:
+  description: "当前页码变化回调"
+  tpl: |-
+    (nzPageIndexChange)="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzTable.nzPageSize:
+  description: "每页数量，可双向绑定"
+  tpl: |-
+    [(nzPageSize)]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzTable@nzPageSizeChange:
+  description: "每页数量变化回调"
+  tpl: |-
+    (nzPageSizeChange)="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzTable@nzPageIndexChangeClick:
+  description: "用户点击页码事件回调"
+  tpl: |-
+    (nzPageIndexChangeClick)="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: ''}
+
+nzTable.nzBordered:
+  description: "是否显示边框"
+  tpl: |-
+    [nzBordered]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"false"'}
+
+nzTable.nzSize:
+  description: "table大小"
+  tpl: |-
+    [nzSize]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"default"', expression: 'enum("small", "middle", "default")'}
+
+nzTable.nzCustomNoResult:
+  description: "是否自定义无数据时内容"
+  tpl: |-
+    [nzCustomNoResult]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"false"'}
+
+nzTable.nzShowFooter:
+  description: "是否显示表脚"
+  tpl: |-
+    [nzShowFooter]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"false"'}
+
+nzTable.nz-table-footer:
+  description: "表脚内容"
+  tpl: |-
+    nz-table-footer$END$
+
+nzTable.nzShowTitle:
+  description: "是否显示表头"
+  tpl: |-
+    [nzShowTitle]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"false"'}
+
+nzTable.nz-table-title:
+  description: "表头内容"
+  tpl: |-
+    nz-table-title$END$
+
+nzTable.nzIsPagination:
+  description: "是否分页"
+  tpl: |-
+    [nzIsPagination]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"true"'}
+
+nzTable.nzLoading:
+  description: "是否显示加载中"
+  tpl: |-
+    [nzLoading]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"false"'}
+
+nzTable.nzShowSizeChanger:
+  description: "是否显示pagination中改变页数"
+  tpl: |-
+    [nzShowSizeChanger]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"false"'}
+
+nzTable.nzPageSizeSelectorValues:
+  description: "pagination中每页显示条目数下拉框值"
+  tpl: |-
+    [nzPageSizeSelectorValues]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"[10, 20, 30, 40, 50]"'}
+
+nzTable.nzShowQuickJumper:
+  description: "是否显示pagination中快速跳转"
+  tpl: |-
+    [nzShowQuickJumper]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"false"'}
+
+nzTable.nzShowTotal:
+  description: "是否显示总数据量"
+  tpl: |-
+    [nzShowTotal]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"false"'}
+
+nzTable.nzIsPageIndexReset:
+  description: "数据变更后是否保留在数据变更前的页码"
+  tpl: |-
+    [nzIsPageIndexReset]="$VAR0$"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"true"'}
