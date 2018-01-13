@@ -10,9 +10,10 @@ nzRow:
 nzCol:
   description: 栅格-列
   tpl: |-
-    <div $cpm$>$END$</div>
+    <div $cpm$ [nzSpan]="$VAR0$">$END$</div>
   variables:
     - {name: 'cpm', alwaysStopAt: false, defaultValue: '"nz-col"'}
+    - {name: 'VAR0', defaultValue: '"1-24"'}
 
 nzRow.nzGutter:
   description: "栅格间隔"

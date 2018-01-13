@@ -1,0 +1,89 @@
+# https://ng.ant.design/#/components/form
+
+nzForm:
+  description: 表单
+  tpl: |-
+    <form $cpm$ [formGroup]="$VAR0$"
+                (ngSubmit)="$VAR1$"
+                [nzLayout]="'$VAR2$'">
+        $END$
+    </form>
+  variables:
+    - {name: 'cpm', alwaysStopAt: false, defaultValue: '"nz-form"'}
+    - {name: 'VAR0', defaultValue: ''}
+    - {name: 'VAR1', defaultValue: ''}
+    - {name: 'VAR2', defaultValue: '"horizontal"', expression: 'enum("horizontal", "vertical", "inline")'}
+
+nzFormControl:
+  description: 表单 - 标定表单控制区域，通常用于放置input，select等组件
+  tpl: |-
+    <div $cpm$ [nzHasFeedback]="$VAR0$"
+                [nzValidateStatus]="'$VAR1$'">
+        $END$
+    </div>
+  variables:
+    - {name: 'cpm', alwaysStopAt: false, defaultValue: '"nz-form-control"'}
+    - {name: 'VAR0', defaultValue: '"true"'}
+    - {name: 'VAR1', defaultValue: '"success"', expression: 'enum("success", "warning", "error", "validating")'}
+
+nzFormItem:
+  description: 表单 - 用于标定一个form item区域
+  tpl: |-
+    <div $cpm$ $VAR0$>
+        $END$
+    </div>
+  variables:
+    - {name: 'cpm', alwaysStopAt: false, defaultValue: '"nz-form-item"'}
+    - {name: 'VAR0', defaultValue: '"nz-row"'}
+
+nzFormLabel:
+  description: 表单 - 用于标定label区域
+  tpl: |-
+    <div $cpm$ $VAR0$ [nzSpan]="$VAR1$">
+      <label for="$VAR2$" $VAR3$>$END$</label>
+    </div>
+  variables:
+    - {name: 'cpm', alwaysStopAt: false, defaultValue: '"nz-form-label"'}
+    - {name: 'VAR0', alwaysStopAt: false, defaultValue: '"nz-col"'}
+    - {name: 'VAR1', defaultValue: '"6"'}
+    - {name: 'VAR2', defaultValue: '""'}
+    - {name: 'VAR3', defaultValue: '"nz-form-item-required"'}
+
+nzForm.nzLayout:
+  description: 表单布局
+  tpl: |-
+     [nzLayout]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"horizontal"', expression: 'enum("horizontal", "vertical", "inline")'}
+
+nzFormControl.nzHasFeedback:
+  description: 当添加该属性时，配合 nzValidateStatus 属性使用，展示校验状态图标，建议只配合 nz-input 组件使用
+  tpl: |-
+     nzHasFeedback$END$
+
+nzFormControl.nzValidateStatus:
+  description: 表单布局
+  tpl: |-
+     [nzValidateStatus]="'$VAR0$'"$END$
+  variables:
+    - {name: 'VAR0', defaultValue: '"success"', expression: 'enum("success", "warning", "error", "validating")'}
+
+nzFormItemRequired:
+  description: 给label添加require样式
+  tpl: |-
+     nz-form-item-required$END$
+
+nzFormExplain:
+  description: 用于显示提示信息，会根据当前nzValidateStatus显示不同的颜色
+  tpl: |-
+     nz-form-explain$END$
+
+nzFormExtra:
+  description: 用于显示表单额外提示信息
+  tpl: |-
+     nz-form-extra$END$
+
+nzFormSplit:
+  description: 用于显示 -分隔符
+  tpl: |-
+     nz-form-split$END$
