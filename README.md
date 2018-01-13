@@ -193,6 +193,17 @@ ng-zorro Live Templates for WebStorm
 | `nzDropdownButton.nzVisible` | "菜单是否显示" |
 | `nzDropdownButton@nzVisibleChange` | "菜单显示状态改变时调用，参数为 nzVisible" |
 | `nzDropdownButton.nzPlacement` | "菜单弹出位置：bottomLeft bottomCenter bottomRight topLeft topCenter topRight" |
+| `nzForm` | "表单" |
+| `nzFormControl` | "表单 - 标定表单控制区域，通常用于放置input，select等组件" |
+| `nzFormItem` | "表单 - 用于标定一个form item区域" |
+| `nzFormLabel` | "表单 - 用于标定label区域" |
+| `nzForm.nzLayout` | "表单布局" |
+| `nzFormControl.nzHasFeedback` | "当添加该属性时，配合 nzValidateStatus 属性使用，展示校验状态图标，建议只配合 nz-input 组件使用" |
+| `nzFormControl.nzValidateStatus` | "表单布局" |
+| `nzFormItemRequired` | "给label添加require样式" |
+| `nzFormExplain` | "用于显示提示信息，会根据当前nzValidateStatus显示不同的颜色" |
+| `nzFormExtra` | "用于显示表单额外提示信息" |
+| `nzFormSplit` | "用于显示 -分隔符" |
 | `nzRow` | "栅格-行" |
 | `nzCol` | "栅格-列" |
 | `nzRow.nzGutter` | "栅格间隔" |
@@ -239,6 +250,15 @@ ng-zorro Live Templates for WebStorm
 | `nzInput.nzRows` | "控制固定框的行数" |
 | `nzInputGroup.nzSize` | "nz-input-group 中所有的 nz-input 的大小" |
 | `nzInput.nzCompact` | "是否用紧凑模式" |
+| `nzLayout` | "&lt;nz-layout&gt;&#10;  &lt;nz-header&gt;&#10;    ...&#10;  &lt;/nz-header&gt;&#10;  &lt;nz-content&gt;&#10;&#10;  &lt;/nz-content&gt;&#10;  &lt;nz-footer&gt;&#10;&#10;  &lt;/nz-footer&gt;&#10;&lt;/nz-layout&gt;" |
+| `nzLayoutSider` | "&lt;nz-sider [nzCollapsible]=&quot;...&quot;&#10;     [nzWidth]=&quot;...&quot;&#10;     [nzCollapsedWidth]=&quot;...&quot;&gt;&#10;  ...&#10;&lt;/nz-sider&gt;" |
+| `nzLayoutSider.nzCollapsible` | "是否可收起，当添加该属性时变为可收起" |
+| `nzLayoutSider.nzCollapsed` | "当前收起状态，可双向绑定" |
+| `nzLayoutSider@nzCollapseChange` | "展开-收起时的回调函数" |
+| `nzLayoutSider.nzTrigger` | "自定义 trigger，设置为 null 时隐藏 trigger" |
+| `nzLayoutSider.nzWidth` | "宽度" |
+| `nzLayoutSider.nzCollapsedWidth` | "收缩宽度，设置为 0 会出现特殊 trigger" |
+| `nzLayoutSider.nzBreakpoint` | "触发响应式布局的断点" |
 | `nzMenu` | "导航菜单" |
 | `nzMenuItem` | "菜单子项目" |
 | `nzMenuItemDivider` | "菜单子项目分隔线" |
@@ -372,6 +392,50 @@ ng-zorro Live Templates for WebStorm
 | `nzSwitch.nzDisabled` | "开关是否禁用" |
 | `nzSwitch.checked` | "选中时的内容" |
 | `nzSwitch.unchecked` | "非选中时的内容" |
+| `nzTable` | "表格 - 展示行列数据。" |
+| `nzTableSort` | "表格 - 嵌入th中显示排序状态。" |
+| `nzTableFilter` | "表格 - 与nz-dropdown结合使用，用于过滤表中的数据" |
+| `nzTableThead` | "表格 - 标定thead。" |
+| `nzTableTh` | "表格 - th。" |
+| `nzTableBody` | "表格 - tbody。" |
+| `nzTableBodyTr` | "表格 - 标定tbody中tr。" |
+| `nzTableTd` | "表格 - 标定td。" |
+| `nzTableDivider` | "表格 - 用于td中分隔数据" |
+| `nzTableRowIndent` | "表格 - 与树形数据展示配合使用" |
+| `nzTableRowExpandIcon` | "表格 - 与可展开和树形数据展示配合使用" |
+| `nzTableRowExpandIcon.nzExpand` | "标识是否展开，可双向绑定" |
+| `nzTableRowExpandIcon.nzShowExpand` | "是否显示此 展开/收缩 按钮" |
+| `nzTableRowIndent.nzIndentSize` | "控制每一层的缩进宽度" |
+| `nzTableTd.nzCheckbox` | "是否有checkbox出现在当前td上" |
+| `nzTableTd.nzExpand` | "是否是展开按钮列" |
+| `nzTableTh.nzCheckbox` | "是否有checkbox出现在当前th上" |
+| `nzTableTh.nzExpand` | "是否是展开按钮列" |
+| `nzTableTh.nzWidth` | "当前列的宽度，暂时不支持合并列宽度" |
+| `nzTable.nzAjaxData` | "远程异步数据，与nzDataSource二选一" |
+| `nzTable.nzDataSource` | "同步数据，与nzAjaxData二选一" |
+| `nzTable@nzDataChange` | "当前分页数据回调，返回当前分页数据的内容" |
+| `nzTable.nzScroll` | "纵向支持滚动，也可用于指定滚动区域的高度：{ y: 300 }" |
+| `nzTable.nzFixedHeader` | "用于定位固定表头，与 nzScroll配合使用" |
+| `nzTable.nzTotal` | "数据总量，用于与nzAjaxData共同使用" |
+| `nzTable.nzPageIndex` | "当前页码，可双向绑定" |
+| `nzTable@nzPageIndexChange` | "当前页码变化回调" |
+| `nzTable.nzPageSize` | "每页数量，可双向绑定" |
+| `nzTable@nzPageSizeChange` | "每页数量变化回调" |
+| `nzTable@nzPageIndexChangeClick` | "用户点击页码事件回调" |
+| `nzTable.nzBordered` | "是否显示边框" |
+| `nzTable.nzSize` | "table大小" |
+| `nzTable.nzCustomNoResult` | "是否自定义无数据时内容" |
+| `nzTable.nzShowFooter` | "是否显示表脚" |
+| `nzTable.nz-table-footer` | "表脚内容" |
+| `nzTable.nzShowTitle` | "是否显示表头" |
+| `nzTable.nz-table-title` | "表头内容" |
+| `nzTable.nzIsPagination` | "是否分页" |
+| `nzTable.nzLoading` | "是否显示加载中" |
+| `nzTable.nzShowSizeChanger` | "是否显示pagination中改变页数" |
+| `nzTable.nzPageSizeSelectorValues` | "pagination中每页显示条目数下拉框值" |
+| `nzTable.nzShowQuickJumper` | "是否显示pagination中快速跳转" |
+| `nzTable.nzShowTotal` | "是否显示总数据量" |
+| `nzTable.nzIsPageIndexReset` | "数据变更后是否保留在数据变更前的页码" |
 | `nzTabset` | "标签页 - 选项卡切换组件。" |
 | `nzTab` | "标签页 - 单独 Tab。" |
 | `nzTabset.nzSelectedIndex` | "当前激活的Tab Index，支持双向绑定" |

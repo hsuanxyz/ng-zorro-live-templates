@@ -139,6 +139,17 @@ nzDropdownButton
 <div nzDropdownButton.nzVisible></div>
 <div nzDropdownButton@nzVisibleChange></div>
 <div nzDropdownButton.nzPlacement></div>
+nzForm
+nzFormControl
+nzFormItem
+nzFormLabel
+<div nzForm.nzLayout></div>
+<div nzFormControl.nzHasFeedback></div>
+<div nzFormControl.nzValidateStatus></div>
+nzFormItemRequired
+nzFormExplain
+nzFormExtra
+nzFormSplit
 nzRow
 nzCol
 <div nzRow.nzGutter></div>
@@ -185,6 +196,29 @@ nzTextarea
 <div nzInput.nzRows></div>
 <div nzInputGroup.nzSize></div>
 <div nzInput.nzCompact></div>
+<nz-layout>
+    <nz-header>
+
+    </nz-header>
+    <nz-content>
+
+    </nz-content>
+    <nz-footer>
+
+    </nz-footer>
+</nz-layout>
+<nz-sider [nzCollapsible]="true"
+          [nzWidth]="200"
+          [nzCollapsedWidth]="64">
+
+</nz-sider>
+<div nzCollapsible></div>
+<div [nzCollapsed]=""></div>
+<div (nzCollapseChange)=""></div>
+<div [nzTrigger]=""></div>
+<div [nzWidth]="200"></div>
+<div [nzCollapsedWidth]="64"></div>
+<div [nzBreakpoint]="'lg'"></div>
 nzMenu
 nzMenuItem
 nzMenuItemDivider
@@ -318,6 +352,50 @@ nzSwitch
 <div nzSwitch.nzDisabled></div>
 <div nzSwitch.checked></div>
 <div nzSwitch.unchecked></div>
+nzTable
+nzTableSort
+nzTableFilter
+nzTableThead
+nzTableTh
+nzTableBody
+nzTableBodyTr
+nzTableTd
+nzTableDivider
+nzTableRowIndent
+nzTableRowExpandIcon
+<div nzTableRowExpandIcon.nzExpand></div>
+<div nzTableRowExpandIcon.nzShowExpand></div>
+<div nzTableRowIndent.nzIndentSize></div>
+<div nzTableTd.nzCheckbox></div>
+<div nzTableTd.nzExpand></div>
+<div nzTableTh.nzCheckbox></div>
+<div nzTableTh.nzExpand></div>
+<div nzTableTh.nzWidth></div>
+<div nzTable.nzAjaxData></div>
+<div nzTable.nzDataSource></div>
+<div nzTable@nzDataChange></div>
+<div nzTable.nzScroll></div>
+<div nzTable.nzFixedHeader></div>
+<div nzTable.nzTotal></div>
+<div nzTable.nzPageIndex></div>
+<div nzTable@nzPageIndexChange></div>
+<div nzTable.nzPageSize></div>
+<div nzTable@nzPageSizeChange></div>
+<div nzTable@nzPageIndexChangeClick></div>
+<div nzTable.nzBordered></div>
+<div nzTable.nzSize></div>
+<div nzTable.nzCustomNoResult></div>
+<div nzTable.nzShowFooter></div>
+<div nzTable.nz-table-footer></div>
+<div nzTable.nzShowTitle></div>
+<div nzTable.nz-table-title></div>
+<div nzTable.nzIsPagination></div>
+<div nzTable.nzLoading></div>
+<div nzTable.nzShowSizeChanger></div>
+<div nzTable.nzPageSizeSelectorValues></div>
+<div nzTable.nzShowQuickJumper></div>
+<div nzTable.nzShowTotal></div>
+<div nzTable.nzIsPageIndexReset></div>
 nzTabset
 nzTab
 <div nzTabset.nzSelectedIndex></div>
