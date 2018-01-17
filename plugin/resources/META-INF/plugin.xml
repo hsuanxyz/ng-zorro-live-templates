@@ -1,14 +1,20 @@
 <idea-plugin>
   <id>com.ng-zorro.live-templates.plugin</id>
   <name>ng-zorro</name>
-  <version>0.0.1</version>
+  <version>0.0.2</version>
   <vendor email="hsuangm@gmail.com" url="https://github.com/HsuanXyz/ng-zorro-live-templates">HsuanLee</vendor>
 
   <description>
-    <a href="https://ng.ant.design/">ng-zorro</a> Live Templates(code snippet) for WebStorm(IntelliJ)
+    <![CDATA[
+        <a href="https://ng.ant.design/">ng-zorro</a> Live Templates(code snippet) for WebStorm(IntelliJ)
+    ]]>
   </description>
 
-  <change-notes>Initial release of the plugin.</change-notes>
+  <change-notes>
+    <![CDATA[
+      flx: description and change-note in plugin.xml
+    ]]>
+  </change-notes>
 
   <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
   <idea-version since-build="145.0"/>
