@@ -1,7 +1,7 @@
 <idea-plugin>
   <id>com.ng-zorro.live-templates.plugin</id>
   <name>ng-zorro</name>
-  <version>0.0.2</version>
+  <version>0.0.3</version>
   <vendor email="hsuangm@gmail.com" url="https://github.com/HsuanXyz/ng-zorro-live-templates">HsuanLee</vendor>
 
   <description>
@@ -12,7 +12,14 @@
 
   <change-notes>
     <![CDATA[
-      flx: description and change-note in plugin.xml
+      <h3>0.0.3 <small>(2018-01-25)</small></h3>
+      <ul>
+        <li>feat: add upload template</li>
+      </ul>
+      <h3>0.0.2 <small>(2018-01-17)</small></h3>
+      <ul>
+        <li>flx: description and change-note in plugin.xml</li>
+      </ul>
     ]]>
   </change-notes>
 
@@ -21,9 +28,8 @@
 
   <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
        on how to target different products -->
-  <!-- uncomment to enable plugin in all products
-  <depends>com.intellij.modules.lang</depends>
-  -->
+
+  <depends>com.intellij.modules.platform</depends>
 
   <extensions defaultExtensionNs="com.intellij">
     <!-- Add your extensions here -->

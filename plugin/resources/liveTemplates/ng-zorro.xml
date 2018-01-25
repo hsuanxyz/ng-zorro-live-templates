@@ -5939,4 +5939,291 @@
                 <option name="TypeScript" value="true" />
             </context>
         </template>
+        <template
+                name="nzUpload"
+                value="&lt;nz-upload nzAction=&quot;$VAR0$&quot;&gt;&#10;  &lt;button nz-button&gt;&#10;    &lt;i class=&quot;anticon anticon-upload&quot;&gt;&lt;/i&gt;&lt;span&gt;$VAR1$&lt;/span&gt;&#10;  &lt;/button&gt;&#10;&lt;/nz-upload&gt;"
+                description="上传 - 文件选择上传和拖拽上传控件。"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="" alwaysStopAt="true" />
+            <variable name="VAR1" expression="" defaultValue="&quot;Click to Upload&quot;" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzUpload.nzAccept"
+                value="[nzAccept]=&quot;$VAR0$&quot;"
+                description="接受上传的文件类型, 详见 input accept Attribute"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzUpload.nzAction"
+                value="[nzAction]=&quot;$VAR0$&quot;"
+                description="必选参数, 上传的地址"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzUpload.nzBeforeUpload"
+                value="[nzBeforeUpload]=&quot;$VAR0$&quot;"
+                description="上传文件之前的钩子，参数为上传的文件，若返回 false 则停止上传。注意：IE9 不支持该方法。注意：务必使用 => 定义处理方法。"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzUpload.nzCustomRequest"
+                value="[nzCustomRequest]=&quot;$VAR0$&quot;"
+                description="通过覆盖默认的上传行为，可以自定义自己的上传实现。注意：务必使用 => 定义处理方法。"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzUpload.nzData"
+                value="[nzData]=&quot;$VAR0$&quot;"
+                description="上传所需参数或返回上传参数的方法。注意：务必使用 => 定义处理方法。"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzUpload.nzDisabled"
+                value="[nzDisabled]=&quot;$VAR0$&quot;"
+                description="是否禁用"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="&quot;false&quot;" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzUpload.nzFileList"
+                value="[nzFileList]=&quot;$VAR0$&quot;"
+                description="文件列表，双向绑定"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzUpload.nzLimit"
+                value="[nzLimit]=&quot;$VAR0$&quot;"
+                description="限制单次最多上传数量，nzMultiple 打开时有效；0 表示不限"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="&quot;0&quot;" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzUpload.nzSize"
+                value="[nzSize]=&quot;$VAR0$&quot;"
+                description="限制文件大小，单位：KB；0 表示不限"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="&quot;0&quot;" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzUpload.nzFileType"
+                value="[nzFileType]=&quot;$VAR0$&quot;"
+                description="限制文件类型，例如：image/png,image/jpeg,image/gif,image/bmp"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzUpload.nzFilter"
+                value="[nzFilter]=&quot;$VAR0$&quot;"
+                description="自定义过滤器"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzUpload.nzHeaders"
+                value="[nzHeaders]=&quot;$VAR0$&quot;"
+                description="设置上传的请求头部，IE10 以上有效"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzUpload.nzListType"
+                value="[nzListType]=&quot;&apos;$VAR0$&apos;&quot;"
+                description="上传列表的内建样式，支持三种基本样式 text, picture 和 picture-card"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="enum(&quot;text&quot;, &quot;picture&quot;, &quot;picture-card&quot;)" defaultValue="&quot;text&quot;" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzUpload.nzMultiple"
+                value="[nzMultiple]=&quot;$VAR0$&quot;"
+                description="是否支持多选文件，IE10+ 支持。开启后按住 ctrl 可选择多个文件。"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="&quot;false&quot;" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzUpload.nzName"
+                value="[nzName]=&quot;&apos;$VAR0$&apos;&quot;"
+                description="发到后台的文件参数名"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="&quot;file&quot;" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzUpload.nzShowUploadList"
+                value="[nzShowUploadList]=&quot;$VAR0$&quot;"
+                description="是否展示列表, 可设为一个对象，用于单独设定 showPreviewIcon 和 showRemoveIcon"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="&quot;true&quot;" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzUpload.nzShowButton"
+                value="[nzShowButton]=&quot;$VAR0$&quot;"
+                description="是否展示上传按钮"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="&quot;true&quot;" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzUpload.nzWithCredentials"
+                value="[nzWithCredentials]=&quot;$VAR0$&quot;"
+                description="上传请求时是否携带 cookie"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="&quot;false&quot;" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzUpload.nzPreview"
+                value="[nzPreview]=&quot;$VAR0$&quot;"
+                description="点击文件链接或预览图标时的回调。注意：务必什么 => 定义处理方法。"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzUpload.nzRemove"
+                value="[nzRemove]=&quot;$VAR0$&quot;"
+                description="点击移除文件时的回调，返回值为 false 时不移除。支持返回 Observable&lt;boolean&gt; 对象。注意：务必什么 => 定义处理方法。"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
+        <template
+                name="nzUpload@nzChange"
+                value="(nzChange)=&quot;$VAR0$&quot;"
+                description="上传文件状态变更时回调"
+                toReformat="true"
+                toShortenFQNames="true">
+            <variable name="VAR0" expression="" defaultValue="" alwaysStopAt="true" />
+            <context>
+                <option name="HTML" value="true" />
+                <option name="MARKDOWN" value="true" />
+                <option name="TypeScript" value="true" />
+            </context>
+        </template>
 </templateSet>

@@ -1,6 +1,6 @@
 {
   "name": "ng-zorro-live-templates",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "ng-zorro Live Templates for WebStorm",
   "main": "build.js",
   "scripts": {
