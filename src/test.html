@@ -196,29 +196,15 @@ nzTextarea
 <div nzInput.nzRows></div>
 <div nzInputGroup.nzSize></div>
 <div nzInput.nzCompact></div>
-<nz-layout>
-    <nz-header>
-
-    </nz-header>
-    <nz-content>
-
-    </nz-content>
-    <nz-footer>
-
-    </nz-footer>
-</nz-layout>
-<nz-sider [nzCollapsible]="true"
-          [nzWidth]="200"
-          [nzCollapsedWidth]="64">
-
-</nz-sider>
-<div nzCollapsible></div>
-<div [nzCollapsed]=""></div>
-<div (nzCollapseChange)=""></div>
-<div [nzTrigger]=""></div>
-<div [nzWidth]="200"></div>
-<div [nzCollapsedWidth]="64"></div>
-<div [nzBreakpoint]="'lg'"></div>
+nzLayout
+nzLayoutSider
+<div nzLayoutSider.nzCollapsible></div>
+<div nzLayoutSider.nzCollapsed></div>
+<div nzLayoutSider@nzCollapseChange></div>
+<div nzLayoutSider.nzTrigger></div>
+<div nzLayoutSider.nzWidth></div>
+<div nzLayoutSider.nzCollapsedWidth></div>
+<div nzLayoutSider.nzBreakpoint></div>
 nzMenu
 nzMenuItem
 nzMenuItemDivider
@@ -467,3 +453,25 @@ nzTransfer
 <div nzTransfer@nzChange></div>
 <div nzTransfer@nzSearchChange></div>
 <div nzTransfer@nzSelectChange></div>
+nzUpload
+<div nzUpload.nzAccept></div>
+<div nzUpload.nzAction></div>
+<div nzUpload.nzBeforeUpload></div>
+<div nzUpload.nzCustomRequest></div>
+<div nzUpload.nzData></div>
+<div nzUpload.nzDisabled></div>
+<div nzUpload.nzFileList></div>
+<div nzUpload.nzLimit></div>
+<div nzUpload.nzSize></div>
+<div nzUpload.nzFileType></div>
+<div nzUpload.nzFilter></div>
+<div nzUpload.nzHeaders></div>
+<div nzUpload.nzListType></div>
+<div nzUpload.nzMultiple></div>
+<div nzUpload.nzName></div>
+<div nzUpload.nzShowUploadList></div>
+<div nzUpload.nzShowButton></div>
+<div nzUpload.nzWithCredentials></div>
+<div nzUpload.nzPreview></div>
+<div nzUpload.nzRemove></div>
+<div nzUpload@nzChange></div>
