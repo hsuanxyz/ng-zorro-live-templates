@@ -17,6 +17,6 @@ nzAffix.nzOffsetTop:
     [nzOffsetTop]="$END$"
 
 nzAffix.nzTarget:
-  description: "设置需要监听其滚动事件的元素，值为一个返回对应 DOM 元素的函数"
+  description: "设置 nz-affix 需要监听其滚动事件的元素，值为一个返回对应 DOM 元素的函数"
   tpl: |-
     [nzTarget]="$END$"

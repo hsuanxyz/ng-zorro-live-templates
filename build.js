@@ -23,14 +23,14 @@ const data = [];
 fs.writeFileSync('./ng-zorro/ng-zorro.xml', yaml2xml()); // yaml 转 xml，并写入 ng-zorro.xml
 fs.writeFileSync('README.md', readme.replace(            // 生成文档到 README.md
   /(<!--DOC_START-->)[\s\S]*(<!--DOC_END-->)/g,
-  function(match, $1, $2) {
+  function (match, $1, $2) {
     return $1 + '\n' + '\n| 关键字 | 描述 | \n| ----  | ---  | \n' + docHbs(data) + '\n' + $2;
   }));
 fs.writeFileSync('./src/test.html', getTestString());    // 生成测试文件
 
 
 function _read(file) {
-    return fs.readFileSync(file, 'utf8');
+  return fs.readFileSync(file, 'utf8');
 }
 
 /**
@@ -40,12 +40,12 @@ function _read(file) {
  * @private
  */
 function _replaceTemplate(template) {
-    template = template.replace(/\n/g, '&#10;')
+  template = template.replace(/\n/g, '&#10;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&apos;');
-    return JSON.stringify(template);
+  return JSON.stringify(template);
 }
 
 /**
@@ -55,11 +55,11 @@ function _replaceTemplate(template) {
  * @private
  */
 function _replaceDefaultValue(defaultValue) {
-    if (defaultValue) {
-        return defaultValue.replace(/"/g, '&quot;')
-    } else {
-        return '';
-    }
+  if (defaultValue) {
+    return defaultValue.replace(/"/g, '&quot;')
+  } else {
+    return '';
+  }
 }
 
 /**
@@ -69,9 +69,9 @@ function _replaceDefaultValue(defaultValue) {
  * @private
  */
 function _replaceDescription(description) {
-    // 将模板变量替换成 ...
-    // 并压缩成一行
-    return description.replace(/\$.+?\$/g, '...')
+  // 将模板变量替换成 ...
+  // 并压缩成一行
+  return description.replace(/\$.+?\$/g, '...')
     .replace(/\n/g, '')
     .replace(/\s\s/g, ' ')
 }
@@ -82,53 +82,60 @@ function _replaceDescription(description) {
  * @returns {string}
  */
 function readTemplates(templatePath) {
-    let template = '';
-    // TODO 只读 .yaml
-    const templateFiles = fs.readdirSync(templatePath);
-    console.log(templateFiles);
-    templateFiles.forEach(file => {
-        template += _read(path.join(templatePath, file)) + '\n'
-    });
-    return template;
+  let template = '';
+
+  const componentTypes = fs.readdirSync(templatePath);
+  const templateFiles = [];
+  componentTypes.forEach(type => {
+    const componentPaths = fs.readdirSync(path.join(templatePath, type))
+      .filter(e => /.+\.yaml/.test(e))
+      .map(e => path.join(templatePath, type, e));
+    templateFiles.push(...componentPaths);
+  });
+
+  templateFiles.forEach(file => {
+    template += _read(file) + '\n'
+  });
+  return template;
 }
 
 
 function yaml2xml() {
-    Object.keys(templates).forEach(k => {
-        const t = templates[k];
-        let tpl = t.tpl;
+  Object.keys(templates).forEach(k => {
+    const t = templates[k];
+    let tpl = t.tpl;
 
-        // 处理 defaultValue
-        if (Array.isArray(t.variables)) {
-            t.variables = t.variables.map(val => {
-                val.defaultValue = _replaceDefaultValue(val.defaultValue);
-                val.expression = _replaceDefaultValue(val.expression);
-                if (typeof val.alwaysStopAt !== 'boolean' ) {
-                    val.alwaysStopAt = true;
-                }
-                return val;
-            })
+    // 处理 defaultValue
+    if (Array.isArray(t.variables)) {
+      t.variables = t.variables.map(val => {
+        val.defaultValue = _replaceDefaultValue(val.defaultValue);
+        val.expression = _replaceDefaultValue(val.expression);
+        if (typeof val.alwaysStopAt !== 'boolean') {
+          val.alwaysStopAt = true;
         }
-        const snippet = {
-            name: k,
-            description: _replaceDescription(t.description ? JSON.stringify(t.description) : _replaceTemplate(tpl)),
-            tpl: _replaceTemplate(tpl),
-            variables: t.variables || [],
-            tplRaw: tpl
-        };
-        data.push(snippet);
-    });
-    return templateHbs(data);
+        return val;
+      })
+    }
+    const snippet = {
+      name       : k,
+      description: _replaceDescription(t.description ? JSON.stringify(t.description) : _replaceTemplate(tpl)),
+      tpl        : _replaceTemplate(tpl),
+      variables  : t.variables || [],
+      tplRaw     : tpl
+    };
+    data.push(snippet);
+  });
+  return templateHbs(data);
 }
 
 function getTestString() {
-    return Object.keys(templates)
+  return Object.keys(templates)
     .map(k => {
-        if (k.indexOf('.') !== -1 || k.indexOf('@') !== -1 ) {
-            return `<div ${k}></div>`;
-        } else {
-            return k;
-        }
+      if (k.indexOf('.') !== -1 || k.indexOf('@') !== -1) {
+        return `<div ${k}></div>`;
+      } else {
+        return k;
+      }
     }).join('\n');
 }
 
