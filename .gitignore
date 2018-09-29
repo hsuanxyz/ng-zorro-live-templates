@@ -59,3 +59,4 @@ typings/
 
 .idea/
 plugin/out/
+.DS_Store

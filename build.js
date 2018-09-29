@@ -1,13 +1,33 @@
 'use strict';
 
+// imports
 const fs = require('fs');
+const path = require('path');
 const yaml = require('js-yaml');
 const Handlebars = require('handlebars');
-const readme = _read('README.md');
-const template = Handlebars.compile(_read('src/ng-zorro.hbs'));
-const docHbs = Handlebars.compile(_read('src/doc.hbs'));
-const templates = yaml.safeLoad(readTemplates());
+
+// paths
+const templatesPath = path.join(__dirname, 'src', 'templates');
+const readmePath = path.join(__dirname, 'README.md');
+const templateHbsPath = path.join(__dirname, 'src', 'ng-zorro.hbs');
+const docHbsPath = path.join(__dirname, 'src', 'doc.hbs');
+
+// variables
+const readme = _read(readmePath);
+const templateHbs = Handlebars.compile(_read(templateHbsPath));
+const docHbs = Handlebars.compile(_read(docHbsPath));
+const templates = yaml.safeLoad(readTemplates(templatesPath));
 const data = [];
+
+
+fs.writeFileSync('./ng-zorro/ng-zorro.xml', yaml2xml()); // yaml 转 xml，并写入 ng-zorro.xml
+fs.writeFileSync('README.md', readme.replace(            // 生成文档到 README.md
+  /(<!--DOC_START-->)[\s\S]*(<!--DOC_END-->)/g,
+  function(match, $1, $2) {
+    return $1 + '\n' + '\n| 关键字 | 描述 | \n| ----  | ---  | \n' + docHbs(data) + '\n' + $2;
+  }));
+fs.writeFileSync('./src/test.html', getTestString());    // 生成测试文件
+
 
 function _read(file) {
     return fs.readFileSync(file, 'utf8');
@@ -58,14 +78,16 @@ function _replaceDescription(description) {
 
 /**
  * 读取 src/templates 下全部的 yaml 文件，合并返回
+ * @param templatePath
  * @returns {string}
  */
-function readTemplates() {
+function readTemplates(templatePath) {
     let template = '';
     // TODO 只读 .yaml
-    const templateFiles = fs.readdirSync('./src/templates');
+    const templateFiles = fs.readdirSync(templatePath);
+    console.log(templateFiles);
     templateFiles.forEach(file => {
-        template += _read('./src/templates/' + file) + '\n'
+        template += _read(path.join(templatePath, file)) + '\n'
     });
     return template;
 }
@@ -75,7 +97,7 @@ function yaml2xml() {
     Object.keys(templates).forEach(k => {
         const t = templates[k];
         let tpl = t.tpl;
-        
+
         // 处理 defaultValue
         if (Array.isArray(t.variables)) {
             t.variables = t.variables.map(val => {
@@ -96,7 +118,7 @@ function yaml2xml() {
         };
         data.push(snippet);
     });
-    return template(data);
+    return templateHbs(data);
 }
 
 function getTestString() {
@@ -110,10 +132,3 @@ function getTestString() {
     }).join('\n');
 }
 
-fs.writeFileSync('./ng-zorro/ng-zorro.xml', yaml2xml());
-fs.writeFileSync('README.md', readme.replace(
-    /(<!--DOC_START-->)[\s\S]*(<!--DOC_END-->)/g,
-    function(match, $1, $2) {
-        return $1 + '\n' + '\n| 关键字 | 描述 | \n| ----  | ---  | \n' + docHbs(data) + '\n' + $2;
-    }));
-fs.writeFileSync('./src/test.html', getTestString());
