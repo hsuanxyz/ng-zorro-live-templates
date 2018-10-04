@@ -22,9 +22,6 @@ nzButtonGroup+:
     - {name: 'VAR0', defaultValue: ''}
     - {name: 'VAR1', defaultValue: ''}
 
-nzButton.disabled:
-  tpl: |-
-     disabled
 
 nzButton.nzType:
   description: 设置按钮类型，可选值为 primary dashed danger default
@@ -58,3 +55,10 @@ nzButton.nzSize:
      [nzSize]="'$VAR0$'"
   variables:
     - {name: 'VAR0', defaultValue: '"default"', expression: 'enum("small", "large", "default")'}
+
+nzButton.nzBlock:
+  description: 	将按钮宽度调整为其父宽度的选项
+  tpl: |-
+     [nzShape]="$VAR0$"
+  variables:
+    - {name: 'VAR0', defaultValue: '"true"'}
